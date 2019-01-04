@@ -1,2 +1,2 @@
 # driminius.github.io
-# Author: This is the landing page for my personal website that also shares my portfolio
+# This is the landing page for my personal website that also shares my portfolio
