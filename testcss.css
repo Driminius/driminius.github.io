@@ -1,0 +1,59 @@
+/* css for testing new-main.html */
+ul.topnav li {
+
+  list-style:none;
+  float: left;
+}
+
+ul li.topnav-right {
+
+  float: right;
+}
+ul li.dropdownIcon {
+  display: none;
+}
+
+.myFont {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1em; //20px
+}
+
+.socialMediaWrapper{
+  text-align:center;
+  display:block;
+  margin:auto;
+}
+
+div.aside {
+  position: fixed;
+  right: 0px;
+  /* top: 0x */
+}
+
+ul.bulletStyle {
+    font-size: 1em;
+}
+
+/* CSS for Masonry widths */
+.grid-item{
+    width: 200px;
+}
+.grid-item--width2 {
+  width: 400px;
+}
+
+/* Mobile Responisive */
+@media screen and (max-width: 680px) {
+  ul.topnav li:not(:nth-child(1)) {
+    display:none;
+  }
+
+  ul.topnav li.dropdownIcon {
+    display: block;
+    float: right;
+  }
+
+  div.aside {
+    position: relative;
+  }
+}

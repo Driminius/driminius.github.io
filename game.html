@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <title>Driminius</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Font Awesome CDN -->
+  <script src="https://use.fontawesome.com/cabde143bf.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="./css/animate.css">
+
+  <!-- Personal Stylesheet -->
+  <link rel="stylesheet" href="./testcss.css">
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Caveat|Source+Sans+Pro|Special+Elite" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+  <div class="container-fluid">
+
+
+    <div class="row">
+      <div class="col-sm-8 myFont">
+        6/28/2018
+      </br></br>
+
+        <div id="quiz"></div>
+        <button id="submit">Submit Quiz</button>
+        <div id="result"></div>
+
+
+
+      </div>
+
+      <!-- right hand side of website -->
+      <!-- Put social media icons here display them vertically -->
+      <div class="col-sm-4">
+          <div class="item" id="dropdownClick"> Helllo!</div>
+          <div class="rubberBand"> Helllo!</div>
+          <li class="dropdownIcon"><a href="" onclick="dropdownMenu()"> &#9776;</a></li>
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+
+    <!-- <?xml version="1.0"?>
+    <svg width="120" height="120" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+  <rect x="10" y="10" width="100" height="100">
+    <animate attributeType="XML" attributeName="x" from="-100" to="120"
+        dur="10s" repeatCount="indefinite"/>
+  </rect>
+</svg> -->
+
+  </div>
+  <!-- end of content container fluid-->
+
+
+
+  <!-- FOOTER -->
+  <footer class="footer bg-inverse">
+
+  </footer>
+
+  <script>
+    function dropdownMenu() {
+      var changeClass = document.getElementById("dropdownClick");
+      // call the animate class
+      if ( changeClass.className === "item" ) {
+        changeClass.className += " hinge";
+         alert("hahaha!!!!")
+      } else {
+        changeClass.className = "bounceIn";
+        alert("hahah");
+      }
+    }
+
+    function changeResumee() {
+      var changeClass = document.getElementById("changetoResume");
+      var newNode = document.createElement('p');
+      newNode.appendChild(document.createTextNode('<p>some dynamic html</p>'));
+      changeClass.appendChild(newNode);
+
+
+      if ( changeClass.className === "changeResume" ) {
+        changeClass.className += " hinge";
+        changeClass.appendChild(newNode);
+
+
+      } else {
+
+      }
+
+    }
+  </script>
+
+
+  <script>
+    const quizContainer = document.getElementById('quiz');
+    const resultsContainer = document.getElementById('result');
+    const submitButton = document.getElementById('submit');
+
+    const myQuestions = [
+  {
+    question: "Who is the strongest?",
+    answers: {
+      a: "Superman",
+      b: "The Terminator",
+      c: "Waluigi, obviously"
+    },
+    correctAnswer: "c"
+  },
+  {
+    question: "What is the best site ever created?",
+    answers: {
+      a: "SitePoint",
+      b: "Simple Steps Code",
+      c: "Trick question; they're both the best"
+    },
+    correctAnswer: "c"
+  },
+  {
+    question: "Where is Waldo really?",
+    answers: {
+      a: "Antarctica",
+      b: "Exploring the Pacific Ocean",
+      c: "Sitting in a tree",
+      d: "Minding his own business, so stop asking"
+    },
+    correctAnswer: "d"
+  }
+];
+
+
+
+    function buildQuiz() {
+        // store the HTML output
+        const output = [];
+
+        myQuestions.forEach(
+          (currentQuestion, questionNumber) => {
+            const answers = [];
+
+            for ( letter in currentQuestion.answers ) {
+              answers.push(
+                `<label>
+                  <input type="radio" name="question${questionNumber}" value="${letter}">
+                  ${letter} :
+                  ${currentQuestion.answers[letter]}
+                </label>`
+              );
+            }
+
+            // add this question and its answers to the output
+            output.push(
+              `<div class="question"> ${currentQuestion.question} </div>
+              <div class="answers"> ${answers.join('')} </div>`
+            );
+
+          }
+        );
+
+
+        // finally combine our output list into one string of HTML
+
+        quizContainer.innerHTML = output.join('');
+    }
+
+    function showResults() {
+      const answerContainers = quizContainer.querySelectorAll('.answers');
+
+      // keep track of correct answers
+      let numCorrect = 0;
+
+      myQuestions.forEach( (currentQuestion, questionNumber)  => {
+        const answerContainer = answerContainers[questionNumber]; // index
+        const selector = `input[name=question${questionNumber}]:checked`;
+        const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+        if (userAnswer === currentQuestion.correctAnswer) {
+          numCorrect++;
+          answerContainers[questionNumber].style.color = 'lightgreen';
+        } else {
+          answerContainers[questionNumber].style.color ='red';
+        }
+
+
+      });
+
+      resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+    }
+
+    // display quiz right away
+    buildQuiz();
+
+
+
+    // on submit, show resultsContainer
+    submitButton.addEventListener('click', showResults);
+
+    console.log("hello world!");
+
+  </script>
+
+
+
+  <!-- jQuery first, then Tether, then Bootstrap JS. -->
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>
