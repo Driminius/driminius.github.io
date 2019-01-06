@@ -1,3 +1,8 @@
+<!--Author: Adrian Domingo
+    Purpose: To create a calendar filter that gives you dates and iterations.
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +11,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
 </head>
 <body>
@@ -22,10 +28,7 @@
   <h1 class="display-4">Calendar Filter</h1>
   <p class="lead">Welcome to Calendar Filter, in this program you will be able to filter out a calendar for select days.</p>
   <hr class="my-4">
-  <!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-  </p> -->
+
 </div>
 
 
@@ -74,10 +77,10 @@
 <div class="container">
 
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-6">
       <form class="form-inline">
           <label class="lead mr-2 ml-2" for="weekday">Select day: </label>
-          <select class="form-control " name="weekday" id="weekday" >
+          <select style="display:block; margin:auto" class="form-control " name="weekday" id="weekday" >
               <option value=0>Sun</option>
               <option value=1>Mon</option>
               <option value=2>Tues</option>
@@ -86,26 +89,34 @@
               <option value=5>Fri</option>
               <option value=6>Sat</option>
           </select>
-
-
-          <label for="weekdayiteration">Select iteration: </label>
-          <select class="form-control " name="weekdayiteration" id="weekdayiteration" >
+        </form>
+      </div>
+      <div class="col-sm-6">
+    
+        <form class="form-inline">
+          <label class="lead mr-2 ml-2" for="weekdayiteration">Select iteration: </label>
+          <select style="display:block; margin:auto" class="form-control " name="weekdayiteration" id="weekdayiteration" >
           <option value=1>First</option>
           <option value=2>Second</option>
           <option value=3>Third</option>
           <option value=4>Fourth</option>
           <option value=5>Fifth</option>
-
+              
 
 
       </select></form>
+      </div>
 
     </div>
   </div>
 
 
     <div class="row">
-        <div class="col-sm-12" id="calendarFilterID">
+        <div class="lead col-sm-4">
+        </div>
+        <div class="lead col-sm-4" style="display:block; margin:auto" id="calendarFilterID">
+        </div>
+        <div class="lead col-sm-4">
         </div>
     </div>
 
@@ -116,9 +127,15 @@
 
 <!-- Optional JavaScript for bootstrap -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
 
 
 </body>

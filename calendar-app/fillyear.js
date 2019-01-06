@@ -11,14 +11,6 @@ let monthArray = ["January", "February", "March", "April", "May", "June", "July"
 let daysOfMonthArrva = [];
 
 
-// let day = document.getElementById("weekday");
-// day = parseInt(day.value);
-// console.log("value of day is " + day );
-// day = daysOfWeek2[day];
-// let iteration = document.getElementById("weekdayiteration")
-// iteration = parseInt(iteration.value);
-// console.log("value of iteration is " + iteration );
-
 
 // monthIndex is based on 0....11
 // January, .... , December
@@ -68,13 +60,7 @@ function fillYear( ) {
   var fillCounterMonths = 0;
   for ( i = 0; i <= 11; i++ ) {
     var numDays = daysInMonth(fillCounterMonths, year);
-    // if leap year, change the value of numDays for February
-    // if i == 2 then numDays = 29;
-    // if ( i == 2 && leapYear(year) ) {
-    //   console.log("Year: " + year + " is a leapYear");
-    //   numDays = 29;
-    // }
-
+    
     var firstDayNum = firstDay(fillCounterMonths, year);
     // increment the array by holding values of day, day starts at 1
     for (j = 1; j <= numDays; j++ ) {
@@ -85,10 +71,19 @@ function fillYear( ) {
 
       // ****** logic is correct but you need to define the array outside first.
 
+        // you can declare even if month#2 == 0
+        var even = true;
+        if ( ((i+1) % 2) == 0) {
+            console.log("true!");
+            even = true;
+        } else {
+            even = false;
+        }
       arrayCal.push({
           day: j,
           dayOfWeek: daysOfWeek2[firstDayNum],
-          month: i
+          month: i,
+          isOdd: even
       });
 
       firstDayNum++;
@@ -102,25 +97,23 @@ function fillYear( ) {
 
   }
 
+var filterMon = document.getElementById("calendarFilterID"); // body of the calendar
+filterMon.appendChild(document.createElement("h1"));
+filterMon.appendChild(document.createTextNode(year));
+var linebreak = document.createElement('br');
+  filterMon.appendChild(linebreak);
+
+
   // invoke the filter here
   filter( arrayCal );
 }
 
-// change the value of year to a variable
-// call this function on go
-//fillYear(2020, daysOfMonthArrva);
-//console.log(daysOfMonthArrva);
-//console.log(daysOfMonthArrva[daysOfMonthArrva.length - 1]);
-
+// Should I store all this data in an array?
 // get a day and which iteration you want to display
 // and take in an array to check
 // I want 3rd sundays of the year
 function filter( arrayCal ) {
-  // or should it be called here?
-  // var day = document.getElementById("weekday");
-  // day = parseInt(day.value);
-  // var iteration = document.getElementById("weekdayiteration")
-  // iteration = parseInt(iteration.value);
+  
   let day = document.getElementById("weekday");
   day = parseInt(day.value);
   console.log("value of day is " + day );
@@ -148,24 +141,22 @@ function filter( arrayCal ) {
 
       flag = true;
       dayTracker = 0;
-      monthTracker = arrayCal[i].month;
+      monthTracker = arrayCal[i].month; // monthTracker is now equal to current month
      }
 
     // find the selected day, now increment the tracker
     // check flag if month is done
     if ( arrayCal[i].dayOfWeek == day) {
       dayTracker++;
-      // if the dayTracker is equal to the iteration; i.e. 3rd week
+      // if the dayTracker is equal to the iteration; i.e. 3rd week and month changed
       if ( dayTracker == iteration && flag == true) {
-      //   console.log("The " + iteration + " is " + arrayCal[])
+      
         //set flag to false
         console.log("FOUND the " + iteration + " " + arrayCal[i].dayOfWeek);
-        console.log(arrayCal[i].dayOfWeek + " " + arrayCal[i].day + " " + monthArray[arrayCal[i].month]);
-        // reset dayTracker
-        //dayTracker = 0;
+        console.log(arrayCal[i].dayOfWeek + " " + arrayCal[i].day + " " + monthArray[arrayCal[i].month] + arrayCal[i].isOdd );
 
         // add all of these to a child of <p>
-        //filterMon.appendChild(document.createTextNode( arrayCal[i].dayOfWeek + " " + arrayCal[i].day + " " + monthArray[arrayCal[i].month] ) );
+        
         filterMon.appendChild(document.createTextNode( arrayCal[i].dayOfWeek + " " + monthArray[arrayCal[i].month] + " " + arrayCal[i].day ) );
 
         var linebreak = document.createElement('br');
@@ -179,6 +170,7 @@ function filter( arrayCal ) {
   filterMon.appendChild(horizonbreak);
 }
 
+// just clear the content now
 function clearYear() {
   var filterMon = document.getElementById("calendarFilterID"); // body of the calendar
   filterMon.innerHTML = "";
