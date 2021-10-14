@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, intial-scale=1.0" />
+	<title>Movie</title>
+	<style>
+		#root {
+			width:100%;
+		
+		}
+		body {
+			background-color: #333;
+		}
+
+		.container {
+			display: block;
+			flex-wrap: wrap;
+			
+		}
+
+		.navbar{
+			list-style-type: none;
+			margin: 0;
+  			padding: 0;
+			overflow: hidden;
+  			background-color: plum;
+			
+		}
+
+		.navbar li {
+			display: inline;
+			float: left;
+			background-color:plum;
+		}
+		
+		.navbar li a {
+			display: block;
+  			color: black;
+  			text-align: center;
+  			padding: 14px 16px;
+  			text-decoration: none;
+		}
+		#home-icon {
+			float:right;
+		}
+		.card {
+			margin: 1rem;
+			border: 1px solid gray;
+			padding: 10px;
+			border-radius: 7px;
+			background-color: #fff;
+		}
+
+		.personButton {
+			border:none;
+			color: blue;
+			background-color: plum;
+			margin: auto;
+			display: block;
+			font-size: 15px;
+			padding: 10px;
+		}
+		.personButton:hover {
+			background-color: purple;
+			cursor: pointer;
+		}
+
+
+		.movieHeader {
+			width: 100%;
+			height: 600px;
+			object-fit: cover;
+			display: block;
+			margin: auto;
+		
+		}
+		@media screen and (min-width: 600px) {
+			.card {
+				flex: 1 1 calc(50% - 2rem);
+			}
+		}
+
+		@media screen and (min-width: 900px) {
+			.card {
+				flex: 1 1 calc(33% - 2rem);
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<ul id='nvbar' class="navbar">
+		<li id="li-one">
+			<a href="">Home</a>
+		</li>
+		<li id="li-two">
+			<a href="">Home</a>
+		</li>
+		<li id="li-three">
+			<a href="">ya</a>
+		</li>
+		<li id='home-icon'>
+
+		</li>
+	</ul>
+		
+		
+		
+	<div id="root">
+		
+	</div>
+
+
+    
+	<script>
+        /*
+            Very important note here; the data being received is using a GET method from
+            an html form; DO NOT use this method for private information such as passwords,
+            social security, or anything private.
+            In this case; I used the GET method to create a mockup of a UI experience for a 
+			streaming service passing the id of a movie thru the URL from the fan-made studio ghibli
+			api https://ghibliapi.herokuapp.com/.
+      
+      My project started off with Tania Rascia's tutorial of web APIs. Very informative and helpful
+      https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript/
+        */
+
+		//document.getElementById("write").innerHTML = window.location.search; 
+		// tokenize the GET url received  and convert toString()
+		const urlSearchParams = new URLSearchParams(window.location.search);
+		const params = Object.fromEntries(urlSearchParams.entries());
+
+		var movieId = params.value.toString();
+
+		const app = document.getElementById('root');
+		//console.log(app);
+		const logo = document.createElement('img');
+		logo.src = "https://raw.githubusercontent.com/taniarascia/sandbox/master/ghibli/logo.png";
+		const home = document.createElement('a');
+		home.setAttribute('href', './index.html');
+		home.appendChild(logo);
+		const container = document.createElement('div');
+		container.setAttribute('class', 'container');
+		
+		var li1 = document.getElementById('li-one');
+		var li2 = document.getElementById('li-two');
+		var li3 = document.getElementById('li-three');
+
+		var navbar = document.getElementById('nvbar');
+		var elem = document.getElementById('home-icon');
+		elem.appendChild(home);
+		//navbar.appendChild(home);
+		//li1.innerHTML = '<a href="">Home</a>';
+		//li2.innerHTML = '<a href="">Home</a>';
+		//li3.innerHTML = '<a href="">Home</a>';
+
+		//app.appendChild(logo);
+		
+		//app.appendChild(home);
+		app.appendChild(container);
+
+		var req = new XMLHttpRequest();
+		req.open( 'GET', 'https://ghibliapi.herokuapp.com/films/' + movieId, true );
+
+		//console.log(req);
+
+		req.onload = function() {
+			
+			var movie = JSON.parse(this.response); 
+			console.log(movie);
+			if (req.status >= 200 && req.status < 400 ) {
+			
+
+				const imag = document.createElement('img');
+				imag.src = movie.movie_banner;	// or movie.image
+				imag.setAttribute('class', 'movieHeader');
+				//imag.style.width="100%";
+				//imag.style.height="400px";
+				//imag.style.objectFit= "cover";
+				//imag.style.display="block";
+				//imag.style.margin="auto";
+
+				const card = document.createElement('div');
+				card.setAttribute('class', 'card');
+				//card.setAttribute('id', 'cardId' + count);
+				card.setAttribute('id', movie.id);
+				card.setAttribute('onclick', 'DisplayInfo(this.id)' );
+				const h1 = document.createElement('h1');
+				h1.textContent = `${movie.title}`;
+				const h3 = document.createElement('h3');
+				h3.textContent = 'Directed by ' + `${movie.director}`;
+				const producer = document.createElement('h4');
+				producer.textContent = 'Produced by ' + `${movie.producer}`;
+				const releasedate = document.createElement('p');
+				releasedate.textContent = `${movie.release_date}` + ' ' + `${movie.running_time}` +"minutes";
+
+				const button = document.createElement('button');
+				button.setAttribute('class', 'personButton');
+				button.setAttribute('id', 'myBtn');
+				button.setAttribute('onclick', 'displayCharacters()');
+				button.textContent = "More info!";
+
+				const p = document.createElement('p');
+				//movie.description = movie.description.substring(0, 300);
+				p.textContent = `${movie.description}`;
+
+				container.appendChild(card);
+				card.appendChild(imag);
+				card.appendChild(h1);
+				card.appendChild(releasedate);
+				card.appendChild(p);
+				card.appendChild(h3);
+				card.appendChild(producer);
+
+				card.appendChild(button);
+			
+		
+			} else {
+				console.log("error");
+			}
+		}
+		req.send();
+	</script>
+</body>
+</html>
