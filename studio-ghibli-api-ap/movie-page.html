@@ -62,16 +62,13 @@
 		}
 		.card {
 			margin: 1rem;
-			
 			padding: 10px;
 			border-radius: 7px;
-			
 			height: 50%;
 			position: absolute;
 			top: 400px;
 			z-index:10;
 			color: #fff;
-			
 			font-family: 'Lato', sans-serif;
 		}
 		
@@ -83,10 +80,12 @@
 		}
 
 		.extras {
-	
+			font-family: 'Lato', sans-serif;
 			display: block;
 			background-color: rgb(19, 18, 18);
 			margin-top: 75px;
+			color: #fff;
+			
 		}
 
 		.personButton {
@@ -111,6 +110,54 @@
 			display: block;
 			margin: auto;
 		}
+
+
+
+		/* style for gallery */
+		.container-gallery {
+        width: 100%;
+        margin: auto;
+        background-color: #333;
+        overflow: hidden;
+        height: 600px;
+        position: relative;
+
+    }
+
+    .gallery {
+		margin-top:300px;
+        display: flex;
+        background-size: cover;
+    }
+
+    .gallery img {
+        padding: 10px;
+        width: 30%;
+        border-radius: 5px;
+    }
+    button {
+        position:absolute;
+    }
+    .container-gallery button {
+        opacity:0.7;
+        background-color: #fff;
+        width: 10%;
+        border: 0;
+    }
+    .container-gallery button:hover {
+        opacity:0.5;
+        cursor: pointer;
+    }
+    .container-gallery button.leftBtn {
+		margin-top:330px;
+		top:10px;
+       font-size:100px;
+    }
+    .container-gallery button.rightBtn {
+		margin-top:330px;
+		top:10px;
+       font-size: 100px;
+    }
 
 	
 		@media screen and (min-width: 600px) {
@@ -170,13 +217,15 @@
 		const params = Object.fromEntries(urlSearchParams.entries());
 
 		var movieId = params.value.toString();
+		var gal;
+		var sliderMovies = [];
 
 		const app = document.getElementById('root');
 		//console.log(app);
 		const logo = document.createElement('img');
 		logo.src = "https://raw.githubusercontent.com/taniarascia/sandbox/master/ghibli/logo.png";
 		const home = document.createElement('a');
-		home.setAttribute('href', './index.html');
+		home.setAttribute('href', './JavascriptFunction-studio-api copy.html');
 		home.appendChild(logo);
 		const container = document.createElement('div');
 		container.setAttribute('class', 'container');
@@ -253,7 +302,7 @@
 			
 				const extras = document.createElement('div');
 				extras.setAttribute('class', 'extras');
-				extras.innerHTML = "<h1>Extras</h2>";
+				extras.innerHTML = "<h1>Similar Movies</h2>";
 				extras.innerHTML += "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>";
 				
 				// add a scroll feature and append these childs
@@ -263,18 +312,67 @@
 
 					// Begin accessing JSON data here
 					var data = JSON.parse(this.response);
-					//console.log(data);
+				
+				
+					// create the list and button
+						const contGallery = document.createElement('div');
+						contGallery.setAttribute('class', 'container-gallery');
+						const leftBtn = document.createElement('button');
+						leftBtn.setAttribute('type', 'button');
+						leftBtn.setAttribute('class', 'leftBtn');
+						leftBtn.setAttribute('style', 'left:0; z-index:49;');
+						leftBtn.setAttribute('onclick', 'leftShift()');
+						leftBtn.textContent = '❮'
+						contGallery.appendChild(leftBtn);
+						//container.appendChild(contGallery);
+
+						var cont = document.querySelector('.container-gallery');
+    					
+						
+						const gallery = document.createElement('div');
+						gallery.setAttribute('class', 'gallery');
+						gallery.setAttribute('id', 'galId');
+						//gallery.appendChild(leftBtn);
+						contGallery.appendChild(gallery);
+						console.log(gallery);
+						gal = document.getElementById('galId');
+
+					/* iterate thru an array with a fixed size */
+					for (var i = 0; i < 10; i++) {
+						console.log(data[i].title);
+						const img = document.createElement("img");
+						img.src = data[i].image;
+						img.style.width="20%";
+						//card.appendChild(img);
+						sliderMovies.push({
+							"title" : data[i].title,
+							"movieimage" : data[i].image,
+						});
+						gallery.appendChild(img);
+						
+					
+					}
+					const rightBtn = document.createElement('button');
+					rightBtn.setAttribute('type', 'button');
+					rightBtn.setAttribute('class', 'rightBtn');
+					rightBtn.setAttribute('style', 'right:0; z-index:50;');
+					rightBtn.setAttribute('onclick', 'rightShift()');
+					rightBtn.textContent = '❯'
+					contGallery.appendChild(rightBtn);
+					//gallery.appendChild(rightBtn);
+					app.appendChild(contGallery);
+
 					if (request.status >= 200 && request.status < 400) {
 						data.forEach(movie => {
 						
-						const img = document.createElement("img");
-						img.src = movie.image;
-						img.style.width="20%";
-						card.appendChild(img);
-						const h1 = document.createElement('h1');
-						h1.textContent = movie.title;
+						//const img = document.createElement("img");
+						//img.src = movie.image;
+						//img.style.width="20%";
+						//card.appendChild(img);
+						//const h1 = document.createElement('h1');
+						//h1.textContent = movie.title;
 
-						console.log(movie.id);
+						//console.log(movie.id);
 						
 						});
 					} else {
@@ -286,7 +384,6 @@
 
         request.send();
 				
-				
 				card.appendChild(extras);
 				
 			
@@ -295,8 +392,49 @@
 			}
 		}
 		req.send();
-
 	
+
+
+		//const elem = document.querySelector("#shift");
+		document.addEventListener('readystatechange', function() { 
+			if (document.readyState === "complete") { 
+				
+				console.log("hello");
+				
+
+    
+			}
+			
+		});
+
+		var shiftValue = 0;
+		function rightShift() {
+		var gal = document.getElementById('galId');
+        shiftValue +=100;
+        gal.style.transition = 'transform 0.4s ease-in-out';
+        gal.style.transform  = 'translateX(' + shiftValue + 'px' + ')';
+        // if overflow == true reset?
+        console.log(cont.style.overflow);
+        if (cont.style.overflow === 'hidden') {
+            console.log('hello');
+        }
+    }
+
+    function leftShift() {
+		var gal = document.getElementById('galId');
+        shiftValue -=100;
+		
+        gal.style.transition = 'transform 0.4s ease-in-out';
+        gal.style.transform  = 'translateX(' + shiftValue + 'px' + ')';
+        // if overflow == true reset?
+        console.log(cont.style.overflow);
+        if (cont.style.overflow === 'hidden') {
+            console.log('hello');
+        }
+    }
+    
+    
+
 	</script>
 </body>
 </html>
