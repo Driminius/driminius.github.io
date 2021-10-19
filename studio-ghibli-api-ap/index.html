@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,10 +10,48 @@
 			width: 100%;
 			margin: 0 auto;
 		}
+		body {
+			background-color: rgb(19, 18, 18);
+			margin: 0;
+		}
+
+		.navbar{
+			list-style-type: none;
+			margin: 0;
+  			padding: 0;
+			overflow: hidden;
+  			background-color: plum;
+			
+		}
+
+		.navbar li {
+			display: inline;
+			float: left;
+			background-color:plum;
+		}
+		
+		.navbar li a {
+			display: block;
+  			color: black;
+  			text-align: center;
+  			padding: 14px 16px;
+  			text-decoration: none;
+		}
+		#home-icon {
+			float:right;
+			
+		}
+		#home-icon img {
+			width: 40%;
+		}
 
 		.container {
 			display:inline;
 			flex: flex-wrap;
+			/*
+			display:flex;
+			overflow: hidden;
+			*/
 		}
 
 		.headerImg{
@@ -32,6 +69,24 @@
 			height:300px;
 			
 		}
+		.card h1 {
+			opacity: 1;
+			color: #fff;
+			
+		}
+
+	
+		.hero-header {
+			display:none;
+		}
+		
+		.hero-header img {
+			width:100%;
+			height:500px;
+			object-fit: cover;
+			
+			
+		}
 		
 
 		.personButton {
@@ -42,15 +97,35 @@
 			display: block;
 			font-size: 15px;
 			padding: 10px;
+		
 		}
 		.personButton:hover {
 			background-color: purple;
 			cursor: pointer;
 		}
+		
+		form {
+			display:block;
+			margin:auto;
+			
+		}
 
+		input {
+			margin: 0;
+			
+		}
 		.playBtn {
 			background-color: yellow;
+			font-size: 45px;
+			border: none;
 			cursor: pointer;
+			display:block;
+			margin: auto;
+		
+		}
+
+		.playBtn:hover {
+			background-color: rgb(84, 124, 4);
 		}
 		@media screen and (min-width: 600px) {
 			.card {
@@ -67,9 +142,26 @@
 </head>
 <body>
 
+
+	
+	<ul id='nvbar' class="navbar">
+		<li id="li-one">
+			<a href=""></a>
+		</li>
+		<li id="li-two">
+			<a href=""></a>
+		</li>
+		<li id="li-three">
+			<a href=""></a>
+		</li>
+		<li id='home-icon'>
+
+		</li>
+	</ul>
 	<div id="root">
+		<div id="hero-landing" class="hero-header">
 
-
+		</div>
 	</div>
 
 	<script>
@@ -83,7 +175,30 @@
 		const container = document.createElement('div');
 		container.setAttribute('class', 'container');
 
-		app.appendChild(logo);
+		//app.appendChild(logo);
+		//app.appendChild(container);
+
+
+		const home = document.createElement('a');
+		home.setAttribute('href', './JavascriptFunction-studio-api copy.html');
+		home.appendChild(logo);
+		
+
+		var li1 = document.getElementById('li-one');
+		var li2 = document.getElementById('li-two');
+		var li3 = document.getElementById('li-three');
+
+		var navbar = document.getElementById('nvbar');
+		var elem = document.getElementById('home-icon');
+		elem.appendChild(home);
+
+		var header = document.getElementById('hero-landing');
+		const img = document.createElement('img');
+				
+		header.appendChild(img);
+
+
+
 		app.appendChild(container);
 
 		var req = new XMLHttpRequest();
@@ -135,7 +250,7 @@
 				input2.setAttribute('style', 'display:none');
 				const input1 = document.createElement('input');
 				input1.setAttribute('type', 'submit');
-				input1.setAttribute('value', 'Submit');
+				input1.setAttribute('value', '▶️');
 				input1.setAttribute('class', 'playBtn');
 				form.appendChild(input2);
 				form.appendChild(input1);
@@ -166,9 +281,19 @@
 			
 				var data = JSON.parse(this.response);
 
+				//header.addEventListener("mouseenter", function ( event ) {
+				//	console.log('hello');
+
+				//});
+				header.style.transition = 'all 3s';
+				img.style.transition = 'all 3s';
+				img.src = data.image;
+				header.style.display = "block";
+				
+				//header.setAttribute('style', 'background-image:url(\''+ data.image +'\')' );
+				
+				console.log(data.image);
 				// fetch an array of ppl; if empty say sorry
-			
-			
 				if ( data.people.toString() == 'https://ghibliapi.herokuapp.com/people/' ) {
 					console.log("sorry no characters reported from the /film/ endpoint");
 					return;
