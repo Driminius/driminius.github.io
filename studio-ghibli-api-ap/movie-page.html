@@ -19,7 +19,6 @@
 
 		.container {
 			display: block;
-	
 			position: relative;
 		}
 
@@ -75,14 +74,12 @@
 
 		.card h1 {
 			font-family: 'Lato', sans-serif;
-			
 			color: #fff;
 		}
 
 		.extras {
 			font-family: 'Lato', sans-serif;
 			display: block;
-			background-color: rgb(19, 18, 18);
 			margin-top: 75px;
 			color: #fff;
 			
@@ -121,11 +118,11 @@
         overflow: hidden;
         height: 600px;
         position: relative;
-
+		
     }
 
     .gallery {
-		margin-top:300px;
+		margin-top:150px;
         display: flex;
         background-size: cover;
     }
@@ -143,34 +140,46 @@
         background-color: #fff;
         width: 10%;
         border: 0;
+		margin-top:200px;
+		font-size:100px;
     }
     .container-gallery button:hover {
         opacity:0.5;
         cursor: pointer;
     }
     .container-gallery button.leftBtn {
-		margin-top:330px;
 		top:10px;
-       font-size:100px;
     }
     .container-gallery button.rightBtn {
-		margin-top:330px;
 		top:10px;
-       font-size: 100px;
     }
 
 	
-		@media screen and (min-width: 600px) {
+		/* cell phone viewport */
+		@media screen and (max-width: 600px) {
 			.card {
 				flex: 1 1 calc(50% - 2rem);
+				top: 250px;
 			}
+			.container-gallery {
+				height: 300px;
+			}
+			.gallery {
+				margin-top: 100px;
+			}
+			.container-gallery button {
+				font-size:40px;
+				margin-top:150px;
+			}
+		}
+		/*table viewport */
+		@media screen and (min-width: 800px) {
+					.card {
+						flex: 1 1 calc(33% - 2rem);
+					}
+					
 		}
 
-		@media screen and (min-width: 900px) {
-			.card {
-				flex: 1 1 calc(33% - 2rem);
-			}
-		}
 	</style>
 </head>
 <body>
@@ -303,7 +312,6 @@
 				const extras = document.createElement('div');
 				extras.setAttribute('class', 'extras');
 				extras.innerHTML = "<h1>Similar Movies</h2>";
-				extras.innerHTML += "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>";
 				
 				// add a scroll feature and append these childs
 				var request = new XMLHttpRequest();
@@ -343,6 +351,13 @@
 						const img = document.createElement("img");
 						img.src = data[i].image;
 						img.style.width="20%";
+						if ( i == 0 ) {
+							img.setAttribute('id', 'firstSlide');
+						}
+
+						if ( i == 9 ) {
+							img.setAttribute('id', 'lastSlide');
+						}
 						//card.appendChild(img);
 						sliderMovies.push({
 							"title" : data[i].title,
@@ -406,9 +421,14 @@
 			}
 			
 		});
-
+		var counter = 0;
 		var shiftValue = 0;
 		function rightShift() {
+			if (counter == 0) {
+				return;
+			}
+			counter--;
+			console.log(counter);
 		var gal = document.getElementById('galId');
         shiftValue +=100;
         gal.style.transition = 'transform 0.4s ease-in-out';
@@ -421,6 +441,11 @@
     }
 
     function leftShift() {
+		if (counter == 9) {
+			return;
+		}
+		counter++;
+		console.log(counter);
 		var gal = document.getElementById('galId');
         shiftValue -=100;
 		
