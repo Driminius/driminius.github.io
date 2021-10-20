@@ -10,6 +10,14 @@ ul.topnav li {
   float: left;
 }
 
+ul li a {
+  color: lime;
+}
+
+ul li a:hover {
+  color: limegreen;
+}
+
 ul li.topnav-right {
 
   float: right;
@@ -19,7 +27,7 @@ ul li.dropdownIcon {
 }
 
 .myFont {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1em; 
 }
 
