@@ -1,4 +1,9 @@
 /* css for testing new-main.html */
+body {
+  background-color: #333;
+  color: #fff;
+}
+
 ul.topnav li {
 
   list-style:none;
@@ -15,7 +20,7 @@ ul li.dropdownIcon {
 
 .myFont {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1em; //20px
+  font-size: 1em; 
 }
 
 .socialMediaWrapper{
@@ -24,10 +29,14 @@ ul li.dropdownIcon {
   margin:auto;
 }
 
-div.aside {
+.aside {
   position: fixed;
   right: 0px;
   /* top: 0x */
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow:hidden;
+  
 }
 
 ul.bulletStyle {
@@ -41,6 +50,7 @@ ul.bulletStyle {
 .grid-item--width2 {
   width: 400px;
 }
+
 
 /* Mobile Responisive */
 @media screen and (max-width: 680px) {

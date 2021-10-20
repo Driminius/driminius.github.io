@@ -81,7 +81,7 @@
 
 
       <!-- Put social media icons here display them vertically, sticky, affixed-->
-      <div class="col-sm-4  aside">
+      <div id="nav-fixed" class="col-sm-4  aside">
         <div class="row ">
           <div class="col-lg-12 socialMediaWrapper"><span style="font-size: 3em; color: #3B5998";><a style="color:inherit" target="_blank" href="https://www.facebook.com">
             <i class="fab fa-facebook"></i></a></span></div>
@@ -186,6 +186,12 @@
   </footer>
 
   <script>
+    var elem = document.getElementById('nav-fixed');
+   // elem.setAttribute('style', 'background-image:url(\'./assets/img/adrian-solo-.png\')');
+    const img = document.createElement('img');
+    img.src = './assets/img/adrian-solo-.png';
+    elem.appendChild(img);
+
     function dropdownMenu() {
       var changeClass = document.getElementById("dropdownClick");
       // call the animate class
