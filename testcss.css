@@ -1,4 +1,7 @@
 /* css for testing new-main.html */
+* {
+  margin: 3px;
+}
 body {
   background-color: #333;
   color: #fff;
@@ -78,7 +81,12 @@ ul.bulletStyle {
     float: right;
   }
 
-  div.aside {
-    position: relative;
+  .aside {
+   right: auto;
+   display: flex;
+   position: relative;
+  }
+  .aside img {
+    display: none;
   }
 }
