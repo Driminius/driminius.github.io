@@ -10,6 +10,13 @@ ul.topnav li {
   float: left;
 }
 
+a {
+  color: lime;
+}
+a:hover {
+  color: limegreen;
+}
+
 ul li a {
   color: lime;
 }
