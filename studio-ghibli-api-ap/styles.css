@@ -1,0 +1,133 @@
+#root {
+			
+    width: 100%;
+    margin: 0 auto;
+}
+body {
+    background-color: rgb(19, 18, 18);
+    margin: 0;
+}
+
+.navbar{
+    list-style-type: none;
+    margin: 0;
+      padding: 0;
+    overflow: hidden;
+      background-color: plum;
+    
+}
+
+.navbar li {
+    display: inline;
+    float: left;
+    background-color:plum;
+}
+
+.navbar li a {
+    display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+}
+#home-icon {
+    float:right;
+    
+}
+#home-icon img {
+    width: 40%;
+}
+
+.container {
+    display:inline;
+    flex: flex-wrap;
+    /*
+    display:flex;
+    overflow: hidden;
+    */
+}
+
+.headerImg{
+    display:block;
+}
+
+.card {
+    width: 20%;
+    margin: 1rem;
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 7px;
+    float:left;
+    background-size: cover;
+    height:300px;
+    
+}
+.card h1 {
+    opacity: 1;
+    color: #fff;
+    
+}
+
+
+.hero-header {
+    display:none;
+}
+
+.hero-header img {
+    width:100%;
+    height:500px;
+    object-fit: cover;
+    
+    
+}
+
+
+.personButton {
+    border:none;
+    color: blue;
+    background-color: plum;
+    margin: auto;
+    display: block;
+    font-size: 15px;
+    padding: 10px;
+
+}
+.personButton:hover {
+    background-color: purple;
+    cursor: pointer;
+}
+
+form {
+    display:block;
+    margin:auto;
+    
+}
+
+input {
+    margin: 0;
+    
+}
+.playBtn {
+    background-color: yellow;
+    font-size: 45px;
+    border: none;
+    cursor: pointer;
+    display:block;
+    margin: auto;
+
+}
+
+.playBtn:hover {
+    background-color: rgb(84, 124, 4);
+}
+@media screen and (min-width: 600px) {
+    .card {
+        flex: 1 1 calc(50% - 2rem);
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .card {
+        flex: 1 1 calc(33% - 2rem);
+    }
+}
