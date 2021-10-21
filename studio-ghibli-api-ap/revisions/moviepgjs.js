@@ -6,7 +6,6 @@
 			streaming service passing the id of a movie thru the URL from the fan-made studio ghibli
 			api https://ghibliapi.herokuapp.com/.
 
-			this project is based off Tania Rascia
 			https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript/
         */
 
@@ -20,7 +19,6 @@
 		var sliderMovies = [];
 
 		const app = document.getElementById('root');
-		//console.log(app);
 		const logo = document.createElement('img');
 		logo.src = "https://raw.githubusercontent.com/taniarascia/sandbox/master/ghibli/logo.png";
 		const home = document.createElement('a');
@@ -44,7 +42,7 @@
 		//app.appendChild(logo);
 		
 		//app.appendChild(home);
-		//app.appendChild(container);
+		app.appendChild(container);
 		var req = new XMLHttpRequest();
 		req.open( 'GET', 'https://ghibliapi.herokuapp.com/films/' + movieId, true );
 
@@ -58,8 +56,15 @@
 			
 				var elem = document.getElementById("movie-name");
 				elem.innerHTML = movie.title;
+				const imag = document.createElement('img');
+				imag.src = movie.movie_banner;	// or movie.image
+				imag.setAttribute('class', 'movieHeader');
 				
-		
+				const card = document.createElement('div');
+				card.setAttribute('class', 'card');
+				//card.setAttribute('id', 'cardId' + count);
+				card.setAttribute('id', movie.id);
+				card.setAttribute('onclick', 'DisplayInfo(this.id)' );
 				const h1 = document.createElement('h1');
 				h1.textContent = `${movie.title}`;
 				h1.innerHTML = h1.textContent.toUpperCase();
@@ -80,17 +85,15 @@
 				//movie.description = movie.description.substring(0, 300);
 				p.textContent = `${movie.description}`;
 
-				//container.appendChild(imag);
-				console.log("'url(\'" + movie.movie_banner + "')");
-				container.style.backgroundImage = 'url(\'' + movie.movie_banner + "')";
-				
-
-				container.appendChild(h1);
-				container.appendChild(releasedate);
-				container.appendChild(p);
-				container.appendChild(h3);
-				container.appendChild(producer);
-				
+				container.appendChild(imag);
+				//container.appendChild(h1); 
+				container.appendChild(card);
+				//card.appendChild(imag);
+				card.appendChild(h1);
+				card.appendChild(releasedate);
+				card.appendChild(p);
+				card.appendChild(h3);
+				card.appendChild(producer);
 
 		
 			
@@ -110,7 +113,6 @@
 					// create the list and button
 						const contGallery = document.createElement('div');
 						contGallery.setAttribute('class', 'container-gallery');
-						contGallery.appendChild(extras);
 						const leftBtn = document.createElement('button');
 						leftBtn.setAttribute('type', 'button');
 						leftBtn.setAttribute('class', 'leftBtn');
@@ -118,8 +120,8 @@
 						leftBtn.setAttribute('onclick', 'leftShift()');
 						leftBtn.textContent = '❮'
 						contGallery.appendChild(leftBtn);
-					
-						
+						//container.appendChild(contGallery);
+
 						var cont = document.querySelector('.container-gallery');
     					
 						
@@ -185,14 +187,13 @@
 
         request.send();
 				
-				//card.appendChild(extras);
-				//container.appendChild(extras);
+				card.appendChild(extras);
+				
 			
 			} else {
 				console.log("error");
 			}
 		}
-		app.appendChild(container);
 		req.send();
 	
 

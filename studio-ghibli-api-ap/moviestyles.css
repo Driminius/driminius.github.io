@@ -8,8 +8,29 @@ body {
 }
 
 .container {
+    font-family: 'Lato', sans-serif;
     display: block;
+    background-repeat:no-repeat;
+    background-size: cover;
+    color: #fff;
+    background-image:inherit;
+    
+    padding-top: 300px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
+.container h1, h4, p {
+    margin: 0;
     position: relative;
+}
+.container::before {    
+    
+    opacity: 0.3;
+    background-image: inherit;
+    background-size: cover;
+    position: absolute;
+    
 }
 
 .container img.movieHeader {
@@ -23,7 +44,7 @@ body {
 .navbar{
     list-style-type: none;
     margin: 0;
-      padding: 0;
+    padding: 0;
     overflow: hidden;
       background-color: plum;
     
@@ -49,28 +70,11 @@ body {
 #home-icon img {
     width: 40%;
 }
-.card {
-    margin: 1rem;
-    padding: 10px;
-    border-radius: 7px;
-    height: 50%;
-    position: absolute;
-    top: 400px;
-    z-index:10;
-    color: #fff;
-    font-family: 'Lato', sans-serif;
-}
 
-
-.card h1 {
-    font-family: 'Lato', sans-serif;
-    color: #fff;
-}
 
 .extras {
     font-family: 'Lato', sans-serif;
     display: block;
-    margin-top: 75px;
     color: #fff;
     
 }
@@ -103,18 +107,19 @@ body {
 /* style for gallery */
 .container-gallery {
 width: 100%;
-margin: auto;
+margin: 0;
 background-color: #333;
 overflow: hidden;
-height: 600px;
 position: relative;
-
+}
+.container-gallery h1 {
+    padding-left: 30px;
 }
 
 .gallery {
-margin-top:150px;
-display: flex;
-background-size: cover;
+
+    display: flex;
+    background-size: cover;
 }
 
 .gallery img {
@@ -124,6 +129,7 @@ border-radius: 5px;
 }
 button {
 position:absolute;
+
 }
 .container-gallery button {
 opacity:0.7;
@@ -142,24 +148,18 @@ top:10px;
 }
 .container-gallery button.rightBtn {
 top:10px;
+
+
 }
 
 
 /* cell phone viewport */
 @media screen and (max-width: 600px) {
-    .card {
-        flex: 1 1 calc(50% - 2rem);
-        top: 250px;
-    }
-    .container-gallery {
-        height: 300px;
-    }
-    .gallery {
-        margin-top: 100px;
-    }
+   
+ 
     .container-gallery button {
         font-size:40px;
-        margin-top:150px;
+        margin-top:100px;
     }
 }
 /*table viewport */
