@@ -210,11 +210,12 @@
 		});
 		var counter = 0;
 		var shiftValue = 0;
+
 		function rightShift() {
-			if (counter == 0) {
+			if (counter == 9) {
 				return;
 			}
-			counter--;
+			counter++;
 			console.log(counter);
 		var gal = document.getElementById('galId');
         shiftValue +=100;
@@ -228,10 +229,10 @@
     }
 
     function leftShift() {
-		if (counter == 9) {
+		if (counter == 0) {
 			return;
 		}
-		counter++;
+		counter--;
 		console.log(counter);
 		var gal = document.getElementById('galId');
         shiftValue -=100;
