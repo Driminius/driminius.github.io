@@ -218,7 +218,7 @@
 			counter++;
 			console.log(counter);
 		var gal = document.getElementById('galId');
-        shiftValue +=100;
+        shiftValue -=100;
         gal.style.transition = 'transform 0.4s ease-in-out';
         gal.style.transform  = 'translateX(' + shiftValue + 'px' + ')';
         // if overflow == true reset?
@@ -235,7 +235,7 @@
 		counter--;
 		console.log(counter);
 		var gal = document.getElementById('galId');
-        shiftValue -=100;
+        shiftValue +=100;
 		
         gal.style.transition = 'transform 0.4s ease-in-out';
         gal.style.transform  = 'translateX(' + shiftValue + 'px' + ')';
