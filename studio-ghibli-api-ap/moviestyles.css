@@ -8,30 +8,28 @@ body {
 }
 
 .container {
+    color: #fff;
     font-family: 'Lato', sans-serif;
     display: block;
     background-repeat:no-repeat;
     background-size: cover;
-    color: #fff;
-    background-image:inherit;
+    background-color: #333;
+    background-blend-mode: multiply;
+ 
     
     padding-top: 300px;
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 30px;
 }
+
+
+
 .container h1, h4, p {
     margin: 0;
     position: relative;
 }
-.container::before {    
-    
-    opacity: 0.3;
-    background-image: inherit;
-    background-size: cover;
-    position: absolute;
-    
-}
+
 
 .container img.movieHeader {
     opacity:0.5;
