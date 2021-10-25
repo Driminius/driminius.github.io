@@ -13,8 +13,8 @@ body {
     display: block;
     background-repeat:no-repeat;
     background-size: cover;
-    background-color: #333;
-    background-blend-mode: multiply;
+    background-color: rgb(134, 134, 134);
+    background-blend-mode:darken;
  
     
     padding-top: 300px;
