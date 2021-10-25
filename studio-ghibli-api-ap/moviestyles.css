@@ -14,7 +14,7 @@ body {
     background-repeat:no-repeat;
     background-size: cover;
     background-color: rgb(134, 134, 134);
-    background-blend-mode:darken;
+    background-blend-mode:overlay;
  
     
     padding-top: 300px;
