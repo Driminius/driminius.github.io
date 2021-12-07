@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='icon' href="./img/Target_Corporation_logo_(vector).svg" type='image/icon type'>
+    <title>Target : Expect More. Pay Less.</title>
+    <link rel='stylesheet' href='./style.css' />
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-nav-brand">
+                
+                <svg width="44" height="44" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><path fill='#fff' d="M12 1c6.074 0 10.999 4.925 10.999 11 0 6.074-4.925 10.999-11 10.999-6.074 0-10.999-4.925-10.999-11C1 5.925 5.925 1 12 1zm0 18.173a7.174 7.174 0 10-.001-14.347 7.174 7.174 0 000 14.347zm0-3.653a3.52 3.52 0 110-7.04 3.52 3.52 0 010 7.04z" fill-rule="evenodd"></path></svg>
+            </div>
+            <ul class="navbar-nav-left">
+                <li><a>Categories</a></li>
+                <li><a>Deals </a></li>
+                <li><a>What's New </a></li>
+                <li><a>Pickup & Delivery</a></li>
+            </ul>
+            <ul style='align-items:center' class="navbar-nav-right">
+                <li><input size='40' type="text" placeholder="Search.."></li>
+                <li style="font-size:10px;"><svg width="24" height="24" style="enable-background:new 0 0 24 24;" version="1.1" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="info"/><g id="icons"><g id="user"><ellipse fill='#fff' cx="12" cy="8" rx="5" ry="6"/><path fill='#fff' d="M21.8,19.1c-0.9-1.8-2.6-3.3-4.8-4.2c-0.6-0.2-1.3-0.2-1.8,0.1c-1,0.6-2,0.9-3.2,0.9s-2.2-0.3-3.2-0.9    C8.3,14.8,7.6,14.7,7,15c-2.2,0.9-3.9,2.4-4.8,4.2C1.5,20.5,2.6,22,4.1,22h15.8C21.4,22,22.5,20.5,21.8,19.1z"/></g></g></svg>
+                    <br />Sign in</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill='#fff' d="M10 19.5c0 .829-.672 1.5-1.5 1.5s-1.5-.671-1.5-1.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5zm3.5-1.5c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm1.336-5l1.977-7h-16.813l2.938 7h11.898zm4.969-10l-3.432 12h-12.597l.839 2h13.239l3.474-12h1.929l.743-2h-4.195z"/></svg></li>
+            </ul>
+
+
+            <!-- Hamburger Menu -->
+        <button class="hamburger" id='menu-btn' type='button'>
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
+        </button>
+        </div>
+    </nav>
+
+    <!-- secondary nav -->
+    <nav class='navbar-secondary'>
+        <div class='navbar-container'>
+            <ul class='navbar-nav-left'>
+                <li>You're shopping (closes at 10pm):</li>
+            
+                <li><strong>getLocation</strong></li>
+            </ul>
+            <ul class='navbar-nav-right'>
+                <li><a>Registry</a></li>
+                <li><a>Weekly Ad</a></li>
+                <li><a>RedCard</a></li>
+                <li><a>Gift Cards</a></li>
+                <li><a>Find Stores</a></li>
+                <li><a>Orders</a></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill='gray' d="M6.28 3c3.236.001 4.973 3.491 5.72 5.031.75-1.547 2.469-5.021 5.726-5.021 2.058 0 4.274 1.309 4.274 4.182 0 3.442-4.744 7.851-10 13-5.258-5.151-10-9.559-10-13 0-2.676 1.965-4.193 4.28-4.192zm.001-2c-3.183 0-6.281 2.187-6.281 6.192 0 4.661 5.57 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-4.011-3.097-6.182-6.274-6.182-2.204 0-4.446 1.042-5.726 3.238-1.285-2.206-3.522-3.248-5.719-3.248z"/></svg></li>
+                <li><a>More</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- mobile Menu -->
+
+    <div class="mobile-menu hidden" id="menu">
+        <ul>
+            <li>
+                <a href='#'>Menu</a>
+            </li>
+            <li>
+                <a href='#'>Rewards</a>
+            </li>
+            <li>
+                <a href='#'>Gift Cards</a>
+            </li>
+           
+        </ul>
+
+        <div class="mobile-menu-bottom">
+            
+                <button class="btn btn-dark-outline">
+                    Sign In
+                </button>
+                <button class="btn btn-dark">
+                    Join Now
+                </button>
+        
+            <div>
+                <a href="#">
+                    <img src='./img/marker.svg' alt='' >
+                    <span>Find a store</span>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    <section class="box box-a">
+        <img src='./img/desktop-211130-1638285229870.webp' />
+        
+            <div class='box-toys'>
+                <span style='font-weight:bold; font-size:40px; margin-left: 70px;'>Up to</span>
+                <ul style='display:flex; align-items: center; list-style:none; line-height:100px;'>
+                    <li style='margin-left:50px;font-size:100px; font-weight: bold;'>50</li>
+                        <ul style='list-style:none;font-size:40px; font-weight:bold;line-height:40px;'>
+                            <li>%</li>
+                            <li>off</li>
+                        </ul>
+                </ul>
+
+                <span style='font-weight:bold; font-size:40px;'>100s of toys*</span> 
+                <br />
+                <span style='margin-left: 60px;'>+ more toy deals. </span>
+                <br />
+                <button type='button'>Toy Deals</button>
+            </div>
+    </section>
+
+    <section class="box box-b">
+        <div class="card card-a">
+            <div class='card-top'>
+               <h4>Holiday best <img width='15px' height='15px' src='./img/Target_Corporation_logo_(vector).svg'>deal</h4>
+            </div>
+            <div class="card-content">
+                <img style='position: absolute; z-index: 100; width:17%;' src='./img/pngegg.png'>
+                <svg style='position:relative;' width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20 20"><defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" style="stop-color:rgb(172, 0, 0);stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:rgb(211, 22, 22);stop-opacity:1" />
+                    </linearGradient>
+                  </defs><circle  fill="url(#grad1)" cx="10" cy="0" r="13"/>
+                </svg>
+                 Up to <br /><span>50% off</span>
+            </div>
+            <div class='card-outer-content'>
+               <h4>top tech*</h4> 
+            </div>
+        </div>
+        
+        <div class="card card-b">
+            <div class='card-top'>
+                <h4>Holiday best <img width='15px' height='15px' src='./img/Target_Corporation_logo_(vector).svg'>deal</h4>
+             </div>
+             <div class="card-content">
+                <img style='position: absolute; z-index: 100; width: 12%; margin-left: 50px;' src='./img/pngwing.com.png'>
+                <svg style='position:relative;' width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20 20"><defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" style="stop-color:rgb(172, 0, 0);stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:rgb(211, 22, 22);stop-opacity:1" />
+                    </linearGradient>
+                  </defs><circle  fill="url(#grad1)" cx="10" cy="0" r="13"/></svg>
+                  Up to <br /><span>40% off</span>
+             </div>
+             <div class='card-outer-content'>
+                <h3>select trees*</h3><p>+ more Christmas deals.</p>
+            </div>
+        </div>
+        
+        <div class="card card-c">
+            <div class='card-top'>
+                <h4>Holiday best <img width='15px' height='15px' src='./img/Target_Corporation_logo_(vector).svg'>deal</h4>
+             </div>
+             <div class="card-content">
+                 <img style='position: absolute; z-index: 100; width:12%; margin-left: 50px; margin-top: 15px;' src='./img/pngkey.com-holy-bible-png-1135898.png'>
+                <svg style='position:relative;' width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20 20"><defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" style="stop-color:rgb(172, 0, 0);stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:rgb(211, 22, 22);stop-opacity:1" />
+                    </linearGradient>
+                  </defs><circle  fill="url(#grad1)" cx="10" cy="0" r="13"/></svg>
+                 Save <br /><span>$5</span>
+             </div>
+             <div class='card-outer-content'>
+                <h3>when you spend $20 on books*</h3>
+            </div>
+        </div>
+        <div class="card card-d">
+            <div class="card-content">
+                <h2>Explore more Top Deals</h2>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class='box box-c'>
+            <img class='sponsored-image' src='./img/1858437849482505873.jpg'>
+        </div>
+    </section>
+
+    <section class='box box-d'>
+        <h1>Deals of the Day</h1>
+        <div class="box-d-container">
+            
+            <div class="card card-a">
+                
+                <div class="card-content">
+                    <img style='position: absolute; z-index: 100; width:17%;' src='./img/pngegg.png'>
+                    <svg style='position:relative;' width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20 20"><defs>
+                        <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                          <stop offset="0%" style="stop-color:rgb(219, 132, 168);stop-opacity:1" />
+                          <stop offset="100%" style="stop-color:rgb(228, 68, 143);stop-opacity:1" />
+                        </linearGradient>
+                      </defs><circle  fill="url(#grad2)" cx="10" cy="0" r="13"/>
+                    </svg>
+                     Up to <br /><span>50% off</span>
+                </div>
+                <div class='card-outer-content'>
+                   <h4>top tech*</h4> 
+                </div>
+            </div>
+            
+            <div class="card card-b">
+                
+                 <div class="card-content">
+                    <img style='position: absolute; z-index: 100; width: 12%; margin-left: 50px;' src='./img/pngwing.com.png'>
+                    <svg style='position:relative;' width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20 20"><defs>
+                        <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" style="stop-color:rgb(172, 0, 0);stop-opacity:1" />
+                          <stop offset="100%" style="stop-color:rgb(211, 22, 22);stop-opacity:1" />
+                        </linearGradient>
+                      </defs><circle  fill="url(#grad2)" cx="10" cy="0" r="13"/></svg>
+                      Up to <br /><span>40% off</span>
+                 </div>
+                 <div class='card-outer-content'>
+                    <h3>select trees*</h3><p>+ more Christmas deals.</p>
+                </div>
+            </div>
+            
+            <div class="card card-c">
+               
+                 <div class="card-content">
+                     <img style='position: absolute; z-index: 100; width:12%; margin-left: 50px; margin-top: 15px;' src='./img/pngkey.com-holy-bible-png-1135898.png'>
+                    <svg style='position:relative;' width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20 20"><defs>
+                        <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" style="stop-color:rgb(172, 0, 0);stop-opacity:1" />
+                          <stop offset="100%" style="stop-color:rgb(211, 22, 22);stop-opacity:1" />
+                        </linearGradient>
+                      </defs><circle  fill="url(#grad2)" cx="10" cy="0" r="13"/></svg>
+                     Save <br /><span>$5</span>
+                 </div>
+                 <div class='card-outer-content'>
+                    <h3>when you spend $20 on books*</h3>
+                </div>
+            </div>
+            <div class="card card-d">
+                <div class="card-content">
+                    <h2>Explore more Top Deals</h2>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id='gallery' class="box box-de">
+        <button type='button' id='btn-left' class='btnLeft'>
+            
+        </button>
+        
+        <button type='button' id='btn-right' class='btnRight'>
+        </button> 
+        <div id='galContainer' class='gallery-container' >
+        <div class='beginning-card'>Save on top holiday picks</div>
+        <div class='card'>
+            <img src='./img/GUESTv_a318bb8f-a978-4b04-99ac-e5278941e245-v.webp'>
+            <div class='card-text'>
+                TCL 55" Class 4-Series 4K UHD HDR Smart Roku TV – 55S435
+            </div>
+        </div>
+        <div class='card'>
+            <img src='./img/GUESTv_a318bb8f-a978-4b04-99ac-e5278941e245-v.webp'>
+            <div class='card-text'>
+                TCL 55" Class 4-Series 4K UHD HDR Smart Roku TV – 55S435
+            </div>
+        </div>
+        <div class='card'>
+            <img src='./img/GUESTv_a318bb8f-a978-4b04-99ac-e5278941e245-v.webp'>
+            <div class='card-text'>
+                TCL 55" Class 4-Series 4K UHD HDR Smart Roku TV – 55S435
+            </div>
+        </div>
+        <div class='card'>
+            <img src='./img/GUESTv_a318bb8f-a978-4b04-99ac-e5278941e245-v.webp'>
+            <div class='card-text'>
+                TCL 55" Class 4-Series 4K UHD HDR Smart Roku TV – 55S435
+            </div>
+        </div>
+        <div class='card'>
+            <img src='./img/GUESTv_a318bb8f-a978-4b04-99ac-e5278941e245-v.webp'>
+            <div class='card-text'>
+                TCL 55" Class 4-Series 4K UHD HDR Smart Roku TV – 55S435
+            </div>
+        </div>
+        <div class='card'>
+            <img src='./img/GUESTv_a318bb8f-a978-4b04-99ac-e5278941e245-v.webp'>
+            <div class='card-text'>
+                TCL 55" Class 4-Series 4K UHD HDR Smart Roku TV – 55S435
+            </div>
+        </div>
+        <div class='card'>
+            <img src='./img/GUESTv_a318bb8f-a978-4b04-99ac-e5278941e245-v.webp'>
+            <div class='card-text'>
+                TCL 55" Class 4-Series 4K UHD HDR Smart Roku TV – 55S435
+            </div>
+        </div>
+        <div class='card'>
+            <img src='./img/GUESTv_a318bb8f-a978-4b04-99ac-e5278941e245-v.webp'>
+            <div class='card-text'>
+                TCL 55" Class 4-Series 4K UHD HDR Smart Roku TV – 55S435
+            </div>
+        </div>
+        <div class='card'>
+            <img src='./img/GUESTv_a318bb8f-a978-4b04-99ac-e5278941e245-v.webp'>
+            <div class='card-text'>
+                TCL 55" Class 4-Series 4K UHD HDR Smart Roku TV – 55S435
+            </div>
+        </div>
+        <div class='card'>
+            <img src='./img/GUESTv_a318bb8f-a978-4b04-99ac-e5278941e245-v.webp'>
+            <div class='card-text'>
+                TCL 55" Class 4-Series 4K UHD HDR Smart Roku TV – 55S435
+            </div>
+        </div>
+        <div class='card'>
+            <img src='./img/GUESTv_a318bb8f-a978-4b04-99ac-e5278941e245-v.webp'>
+            <div class='card-text'>
+                TCL 55" Class 4-Series 4K UHD HDR Smart Roku TV – 55S435
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section>
+        <div class='box-e-title' style='text-align:center;'><h2>Celebrate together</h2></div>
+        <div class="box box-e">
+            <div class="card">
+                <div class='card-content'><img src='./img/PB-Category-Drivers-Lookbook1200x600-211117-1637166558036.webp' >
+                    <h3 style='margin-top: 20px;'>LEGO Collection x Target</h3>
+                    <p>Beginning December 4.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class='card-content'>
+                    <div class='text-decoration-el'>
+                        From <br /> <span>$12</span>
+                    </div>
+                    <img src='./img/FestiveFamilyClothing_Webcopy-211116-1637091802682.webp' >
+                    <h3 style='margin-top: 20px;'>Family PJs</h3>
+                    <p>Spread instant holiday cheer with matching sets they'll love.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class='bottom-links-background'>
+        <div class="bottom-links">
+            <ul>
+                <li><a>Careers</a></li>
+                <li><a>Email Signup</a></li>
+                <li><a>News & Blog</a></li>
+                <li><a>Target Brands</a></li>
+                <li><a>Advertise with Us</a></li>
+                <li><a>Bullseye Shop</a></li>
+                <li><a>Target's Coronavirus Response</a></li>
+                <li><a>Corporate Responsibility</a></li>
+                <li><a>Pressroom</a></li>
+                <li><a>Investor Relations</a></li>
+                <li><a>Affiliates & Partners</a></li>
+                <li><a>Suppliers</a></li>
+                <li><a>TargetPlus</a></li>
+            </ul>
+            <ul>
+                <li><a>Target Help</a></li>
+                <li><a>Returns</a></li>
+                <li><a>Track Orders</a></li>
+                <li><a>Recalls</a></li>
+                <li><a>Contact Us</a></li>
+                <li><a>Feedback</a></li>
+                <li><a>Accessibility</a></li>
+                <li><a>Security & Fraud</a></li>
+                <li><a>Team Member Services</a></li>
+                <li><a>Size Charts</a></li>
+            </ul>
+            <ul>
+                <li>
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><g fill="none" fill-rule="evenodd"><path fill="#C00" d="M2 22.25h11V2.75H2z"></path><path d="M7.5 9.4a1.172 1.172 0 100-2.345 1.172 1.172 0 000 2.345m0 1.175a2.325 2.325 0 100-4.65 2.325 2.325 0 000 4.65M11 8.25a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0" fill="#FFF"></path><path fill="#720000" d="M6.25 22.25h15.5v-8.5H6.25z"></path><path d="M18.75 17.25v5h-2.5v-5h2.5zm-3.5 0v5h-2.5v-5h2.5zm-3.5 0v5h-2.5v-5h2.5z" fill="#D6D6D6"></path></g></svg>
+                    <a>Careers</a>
+                </li>
+                <li>
+                    <img src='./img/GUEST_b3cea7ef-22bf-4cdf-92bb-e100a10ec623.svg' >
+                    <a>Careers</a>
+                </li>
+                <li>
+                    <img src='./img/GUEST_b3cea7ef-22bf-4cdf-92bb-e100a10ec623.svg' >
+                    <a>Careers</a>
+                </li>
+                <li>
+                    <img src='./img/GUEST_1e7d1a3c-3927-49e3-8ef7-bac2397fb36c.svg' >
+                    <a>Careers</a>
+                </li>
+                <li><a>More In-Store Services</a></li>
+                
+            </ul>
+            <ul>
+                <li>
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><g fill="none"><path d="M2.72 15.43l8.44 1.2c1.38.11 1.82-.72 2-1.22l2.37.22-.47 1.35c-.23.66-.1 1.4.35 1.93l.78.94-.86.71-1.2-1.44a1.7 1.7 0 00-1.15-.6l-11.7-1.79a.22.22 0 01-.2-.25c.14-.91.57-1.15 1.64-1.05" fill="#AAA"></path><path d="M14.9 20.42a1.1 1.1 0 102.2.2 1.1 1.1 0 00-2.2-.2zM2 18.65a1.1 1.1 0 102.2.2 1.1 1.1 0 00-2.2-.2z" fill="#000"></path><path d="M1.39 3.21a.24.24 0 00-.27.27l.07.68.75 6.81c.11 1.09.23 1.4 1.2 1.56l6.24.97c3.23.54 4.5-.15 4.5-.15l-.72 2.06 2.37.22.87-2.47 2.19-6.25c.22-.64.57-1 1.22-1.03l2.06.2c.86.07 1.61-1.09.75-1.17L1.4 3.21z" fill="#C00"></path><path d="M11.04 8.87c.06-.56.56-.99 1.11-.93a1.02 1.02 0 01-.18 2.03 1.03 1.03 0 01-.93-1.1m-.96-.1c-.1 1.1.7 2.05 1.78 2.15a1.97 1.97 0 10-1.78-2.14m1.69 3.12a2.95 2.95 0 01.54-5.89 2.95 2.95 0 11-.54 5.89" fill="#FFF"></path></g></svg>
+                    <a>Careers</a>
+                </li>
+                <li>
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><g transform="translate(.438 4)" fill="none" fill-rule="evenodd"><rect fill="#C00" fill-rule="nonzero" transform="rotate(-90 11.563 8)" x="4.063" y="-3" width="15" height="22" rx="1.499"></rect><path d="M.5625 1.9864C.5625 1.1654 1.2335.5 2.0613.5h19.0024c.8278 0 1.4988.6655 1.4988 1.4864v12.0272c0 .821-.671 1.4864-1.4988 1.4864H2.0613c-.8278 0-1.4988-.6655-1.4988-1.4864V1.9864zm.5 0v12.0272c0 .508.3856.9267.8823.9839l.1165.0066h19.0024c.5122 0 .9344-.3823.992-.875l.0068-.1155V1.9864c0-.508-.3856-.9267-.8823-.9839L21.0637.996H2.0613c-.5122 0-.9344.3823-.992.875l-.0068.1155z" fill="#B30000" fill-rule="nonzero"></path><path d="M11.1521 11.5909c.483 0 .8762.2898.932.7753h-.4592a.4711.4711 0 00-.4711-.377c-.3864 0-.5855.305-.5855.7396 0 .4042.1898.722.5855.722.272 0 .45-.1754.4898-.4839h.4584c-.0483.544-.4195.8821-.9482.8821-.6584 0-1.0592-.4889-1.0592-1.1202h-.0017c0-.6372.3924-1.138 1.0592-1.138zm-1.171.0483v2.1556h-.4076v-.1991h-.006a.5126.5126 0 01-.4744.2465c-.444 0-.6789-.3574-.6993-.776l-.0015-.067c0-.4313.2415-.8093.6915-.8093a.5347.5347 0 01.4626.2373h.006v-.788h.4287zm6.5033 0v2.1556h-.4076v-.1991h-.0059a.5126.5126 0 01-.4745.2465c-.4652 0-.7007-.3923-.7007-.8363l.0008-.0068c0-.4312.2415-.8092.6914-.8092a.5347.5347 0 01.4618.233h.006v-.7837h.4287zm-8.947.555c.4923 0 .7626.3864.7626.8473v.078H7.1739c.0118.2686.1355.3957.3804.3957.1627 0 .3076-.0932.339-.2025h.3779c-.1153.3533-.3568.5253-.7313.5253-.4948 0-.7965-.339-.7965-.821-.0025-.4695.3228-.8228.794-.8228zm5.417-.006c.4559 0 .6779.1543.6779.444v.7516c0 .0912.014.118.0808.1229l.0395.0008v.278a.3754.3754 0 01-.178.0364c-.199 0-.3016-.0601-.3389-.2025-.1025.1237-.2838.2144-.544.2144-.3194 0-.5313-.1695-.5313-.4678h.0051a.411.411 0 01.1356-.3321c.09-.0763.2164-.1203.4328-.148l.1925-.0228c.1946-.0265.2814-.0616.2814-.1792 0-.1788-.1297-.2084-.2746-.2084-.1788 0-.272.072-.2872.2356h-.4288c.0187-.339.2991-.5229.7372-.5229zm1.8353.006a.3211.3211 0 01.094.0152v.3983a.7889.7889 0 00-.1541-.0144c-.311 0-.4237.2143-.4237.5007v.7033h-.4288l-.0025-1.5608h.4076v.2898h.0093a.549.549 0 01.4982-.3321zm-8.747-.555c.3804 0 .6312.2626.6312.5931 0 .272-.1144.45-.339.5406v.006c.2459.0688.2975.301.3133.4942l.007.1251c.0094.2026.0306.3195.0848.3949h-.4762a1.4134 1.4134 0 01-.061-.3737c-.0237-.3025-.072-.4686-.3711-.4686h-.477v.8423H4.881v-2.154h1.1617zm7.1617 1.3913c-.0341.0319-.0961.052-.2087.0686l-.0515.0068c-.2203.0271-.35.0754-.35.2449 0 .1237.0755.1991.2628.1991.2296 0 .3474-.1237.3474-.3533v-.1661zm-4.0088-.5126c-.2449 0-.3745.1957-.3745.4973 0 .2483.1144.5017.377.5017.2286 0 .3516-.1661.367-.4466l.0015-.0608c.0001-.2807-.1083-.4916-.371-.4916zm6.5042 0c-.245 0-.3745.1957-.3745.4973 0 .2483.1143.5017.377.5017.2286 0 .3516-.1661.367-.4466l.0016-.0576c0-.2839-.1084-.4948-.3711-.4948zm-8.1768 0a.3322.3322 0 00-.3491.3313h.693c-.0423-.2347-.1448-.3313-.344-.3313zm-1.649-.5076h-.5194v.6067h.522c.2 0 .3237-.0847.3237-.3076 0-.2228-.1178-.2991-.3263-.2991zm-2.592-.5728a1.2812 1.2812 0 011.282 1.282c0 .708-.574 1.282-1.282 1.282-.708 0-1.282-.574-1.282-1.282 0-.708.574-1.282 1.282-1.282zm0 .4262a.8558.8558 0 100 1.7116.8558.8558 0 000-1.7116zm0 .4169a.439.439 0 01.4398.439.4398.4398 0 11-.4926-.4358l.0528-.0032z" fill="#FFF" fill-rule="nonzero"></path><path d="M17.3889 3.5566c.2612 0 .4123.2037.4325.459l.0024.0597-.0016.0478h-.644c.0068.1644.0777.2417.2176.2417.08 0 .1521-.0419.183-.0957l.012-.0278h.2159c-.0657.2159-.2038.3211-.4178.3211-.2833 0-.4558-.2085-.4558-.5019 0-.288.1863-.5039.4558-.5039zm.8023-.3378v.4799c.0568-.0868.1587-.142.2846-.142.1797 0 .3697.155.3697.5019 0 .334-.178.5039-.3714.5039-.1227 0-.2138-.038-.2677-.1093l-.0238-.0384h-.0035v.1218h-.2332V3.2188h.2453zm1.5043.0775v.2862h.1795v.1753h-.1795v.4725c0 .0886.0206.1106.1037.1106a.4103.4103 0 00.053-.003l.0228-.0044v.205c-.0415.0074-.0967.0092-.145.0092-.1694 0-.2604-.0493-.277-.183l-.0027-.0478v-.5591h-.1484v-.1753h.1484v-.2862h.2452zm-3.4172-.0774c.3419 0 .5628.2361.5628.6514 0 .3893-.185.6342-.4927.6633l-.0631.003H15.75V3.2188h.5283zm2.944.3636v.9541h-.245v-.954h.245zm-.8326.1716c-.1348 0-.2071.1311-.2071.3063 0 .1755.0742.3045.2088.3045.1382 0 .2088-.1346.2088-.3045 0-.1697-.0674-.3063-.2105-.3063zm-2.1754-.2917h-.1933v.8306h.24c.1692 0 .309-.1125.309-.3968 0-.3138-.1295-.4338-.3557-.4338zm1.166.2916c-.1044 0-.1728.0594-.1953.1583l-.0069.0448h.3988c-.0241-.144-.0829-.203-.1967-.203zm1.7193-.5665c.076 0 .1382.0665.1382.1477 0 .081-.0622.1476-.1382.1476-.0758 0-.138-.0665-.138-.1476 0-.0812.0622-.1477.138-.1477z" fill="#FFF"></path><g transform="translate(3.308 5.565)"><rect fill="#BF6C30" width="2.516" height="2.006" rx=".143"></rect><path d="M.4778 1.337h.666v.227l-.6658.0004-.0002-.2275zm1.56 0l.0007.2274-.6667-.0005v-.227h.666zm0-.446v.223h-1.56V.891h1.56zm0-.223h-.666V.442h.6667l-.0007.226zm-.894-.226v.226h-.666L.478.442h.6658z" fill="#F2DA78"></path></g></g></svg>
+                    <a>Careers</a></li>
+                <li>
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><g fill="none" fill-rule="evenodd"><path d="M21.5 7v3.25h-1V22.5h-17V10.25h-1V7h19z" fill="#C00"></path><path d="M20.5 10.25v1.25h-17v-1.25h17zm-7.082-7.739c.694-.772 1.746-1.143 2.739-.969A2.505 2.505 0 0118.086 3.1a2.944 2.944 0 01-.17 2.56c-.411.712-1.091 1.184-1.866 1.292-.327.045-.652.043-.935.045L14.829 7h-.159c-.38 0-1.332-.007-2.064-.013-.194 0-.365-.003-.512-.003h-.11c-.155.001-.356.003-.588.003-.793.006-1.848.013-2.15.013h-.074l-.286-.003c-.287 0-.608 0-.933-.044-.777-.109-1.458-.58-1.868-1.293a2.944 2.944 0 01-.171-2.56 2.508 2.508 0 011.93-1.558c.994-.173 2.045.198 2.738.97.439.49.924 1.09 1.418 1.746.494-.656.979-1.256 1.418-1.747zm2.449.69c-.421-.072-.891.097-1.195.434-.42.467-.883 1.04-1.36 1.673l1.488.007.316-.002c.26.004.492.001.7-.029.257-.035.49-.205.642-.465.186-.325.21-.73.068-1.087a.822.822 0 00-.66-.53zm-7.592-.015l-.142.015a.821.821 0 00-.658.532c-.145.355-.12.761.068 1.086.089.152.289.416.643.466.208.028.448.028.698.028l.319.002c.084-.002.778-.003 1.485-.007a26.23 26.23 0 00-1.36-1.673c-.304-.338-.772-.508-1.195-.434z" fill="#840000"></path><path d="M12 13.25c1.93 0 3.5 1.57 3.5 3.5s-1.57 3.5-3.5 3.5-3.5-1.57-3.5-3.5 1.57-3.5 3.5-3.5zm0 1.166l-.16.005a2.333 2.333 0 00.16 4.662l.16-.005a2.333 2.333 0 00-.16-4.662zm0 1.167a1.166 1.166 0 110 2.333 1.166 1.166 0 010-2.333z" fill="#FFF"></path></g></svg>
+                    <a>Careers</a></li>
+                <li>
+                    <img src='./img/GUEST_77400a3e-7081-4c52-8feb-7126a78353e1.svg' >
+                    <a>Careers</a></li>
+                <li>
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><g fill="none" fill-rule="evenodd"><path d="M10.24 2.52v1.9h3.52v-1.9h-3.52zM13.76.9l1.63 1.35v2.17h4.06v17.83H4.55v-6.47H3.14l-.5-1.36h1.91v-1.35H.75l-.5-1.36h4.3v-1.35h-2.8L1.25 9h3.3V4.42h4.07V2.25L10.24.9h3.52z" fill="#C00"></path><path d="M5.38 15.78a.68.68 0 110 1.35h-.83v-1.35h.83zm0-2.71a.68.68 0 010 1.35h-.83v-1.35h.83zm0-2.71a.68.68 0 110 1.35h-.83v-1.35h.83z" fill="#840000"></path><path d="M11.99 9.28a4.06 4.06 0 11.02 8.12A4.06 4.06 0 0112 9.28zm0 1.35a2.7 2.7 0 10.02 5.41 2.7 2.7 0 00-.02-5.41zm0 1.35A1.35 1.35 0 1112 14.7a1.35 1.35 0 010-2.7z" fill="#FFF"></path></g></svg>
+                    <a>Careers</a></li>
+                <li>
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false"><defs><path d="M9.88 2.5h-4v1.75H4.13V2.5L5.88.75h4l1.75 1.75v1.75h4.12v17.998H0V4.25h9.88V2.5z" id="nds-Icon70a"></path></defs><g transform="translate(4.12)" fill="none" fill-rule="evenodd"><mask id="nds-Icon70b" fill="#fff"><use xlink:href="#nds-Icon70a"></use></mask><use fill="#C00" xlink:href="#nds-Icon70a"></use><g mask="url(#nds-Icon70b)"><path d="M7.865 5.645a3.5 3.5 0 11.019 7.002 3.5 3.5 0 01-.02-7.002zm.002 1.164a2.335 2.335 0 10.014 4.67 2.335 2.335 0 00-.014-4.67zm.004 1.137a1.2 1.2 0 11.007 2.397 1.197 1.197 0 11-.007-2.397z" fill="#FFF"></path><path d="M12.125 17.387v4.863h-3.75v-4.863h3.75zm-4.75 0v4.863h-3.75v-4.863h3.75zm.501-2.656c2.578 0 4.235.975 4.249.984v.912H3.626l.001-.893s1.681-1.003 4.249-1.003z" fill="#D6D6D6"></path><path d="M7.874 14.039c-2.742 0-4.249 1.003-4.249 1.003v.692s1.507-1.003 4.249-1.003c2.741 0 4.251.985 4.251.985v-.691s-1.51-.986-4.251-.986" fill="#7F0000"></path></g></g></svg>
+                    <a>Careers</a></li>
+                <li>
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><g fill="none" fill-rule="evenodd"><path d="M3.45 18.36c.45.43 1.11.62 2.17.62h1.93v2.36c-.04.5-.94.91-2.05.91-1.1 0-2-.4-2.04-.9l-.01-.01zm17.11 0v2.98h-.01c-.04.51-.94.91-2.04.91-1.11 0-2-.4-2.04-.9l-.01-.01v-2.36h1.93c1.06 0 1.72-.2 2.17-.62z" fill="#333"></path><path d="M4.7 5.76c3.2-1.78 11.4-1.78 14.6 0l1 3.34H23v.76c0 .76-.62 1.38-1.38 1.38h-.33c1.15 2.75.5 7.12-.74 8.04H3.45c-1.37-.92-1.88-5.3-.73-8.04h-.33c-.77 0-1.39-.62-1.39-1.38V9.1h2.7zm-.35-2.2c3.43-1.9 11.88-1.9 15.3 0l-.18.3c-.28.53-.9.76-1.46.56-3.19-1.1-8.86-1.1-12.02 0a1.2 1.2 0 01-1.46-.55z" fill="#C00"></path><path d="M6.5 6.99c-1.24 2.74-1.45 7.44-.67 10.3h12.35c.92-2.97.5-7.56-.67-10.3-2.14-1-8.96-1.03-11.02 0" fill="#FFF"></path><path d="M17.5 16.42c.43-2.56.3-5.4-.32-7.85-.29-.03-.57-.08-.84-.1 0 0-.38-1.21-1.76-1.31A2.1 2.1 0 0012.6 8.2h-1.2s-.48-1.16-1.96-1.04c-1.36.1-1.78 1.3-1.78 1.3l-.83.11a19.53 19.53 0 00-.32 7.85H17.5z" fill="#333"></path><path d="M4.04 12.78c.25-.15.57.04.55.33-.06.69-.1 1.9.1 3.2a.47.47 0 01-.58.51c-1.52-.41-.94-3.5-.07-4.04zm15.38.33a.36.36 0 01.54-.33c.87.54 1.45 3.63-.07 4.04a.46.46 0 01-.58-.52c.2-1.28.16-2.5.1-3.19z" fill="#7F0000"></path><path d="M12 9.07a3.22 3.22 0 011.72.5l.14.08a3.25 3.25 0 11-3.72 0l.14-.08a3.24 3.24 0 011.72-.5zm.02 1.09h-.04a2.16 2.16 0 10.04 0zM12 11.18a1.12 1.12 0 110 2.24 1.12 1.12 0 110-2.24z" fill="#FFF"></path></g></svg>
+                    <a>Careers</a></li>
+                
+                <li>
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><g fill="none" fill-rule="evenodd"><path fill="#CFB597" d="M.602 18.215h14.114V4.102H.602z"></path><path d="M7.658 7.658a3.498 3.498 0 013.13 5.068 3.502 3.502 0 01-6.63-1.568c0-1.932 1.568-3.5 3.5-3.5zm0 1.167a2.334 2.334 0 10.002 4.668 2.334 2.334 0 00-.002-4.668zm0 1.167a1.166 1.166 0 11.002 2.332 1.166 1.166 0 01-.002-2.332zm15.944 8.223v-2.578l-4.755-5.786h-4.131v8.364z" fill="#C00"></path><path d="M16.29 13.843l-.007-2.423 1.816.009 1.983 2.414c.005.006-3.793 0-3.793 0" fill="#FFF"></path><path d="M5.444 16.392a2.216 2.216 0 012.214 2.22 2.222 2.222 0 11-2.214-2.22zm13.33 0a2.216 2.216 0 012.214 2.22 2.222 2.222 0 11-2.214-2.22z" fill="#333"></path></g></svg>
+                    <a>Careers</a></li>
+                <li>
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><g fill="none" fill-rule="evenodd"><path fill="#B5865E" d="M1.25 19.5h8v-15h-8z"></path><path fill="#CEA87F" d="M9.25 19.5h13.5v-15H9.25z"></path><path d="M15.981 13.207a1.213 1.213 0 010-2.424c.655 0 1.207.552 1.207 1.217 0 .664-.552 1.207-1.207 1.207m.028-3.537A2.326 2.326 0 0013.67 12a2.327 2.327 0 002.34 2.33A2.323 2.323 0 0018.33 12a2.322 2.322 0 00-2.32-2.33M12.5 12c0-1.937 1.563-3.5 3.51-3.5A3.493 3.493 0 0119.5 12c0 1.937-1.563 3.5-3.49 3.5A3.497 3.497 0 0112.5 12" fill="#C00"></path><path fill="#CEA87F" d="M6.75 7.5l-.375-.2L6 7.5l-.375-.2-.375.2-.375-.2-.375.2-.375-.2-.375.2v-3h3zm-3 9l.375.2.375-.2.375.2.375-.2.375.2.375-.2.375.2.375-.2v3h-3z"></path></g></svg>
+                    <a>Careers</a></li>
+
+                <li><a>More Services</a>
+                </li>
+            </ul>
+        </div>
+        <div class='bottom-links-picture'>
+            <img src='./img/GUEST_ca8f1d56-9000-4407-be78-2c33be983dab.svg' >
+        </div>
+    </section>
+
+    <footer class='bottom-footer'>
+        <div class="footer-container">
+            <ul class="social-media">
+                <li>
+                    <img src='./img/social-pinterest.svg'>
+                </li>
+                <li>
+                    <img src='./img/social-facebook.svg'>
+                </li>
+                <li>
+                    <img src='./img/social-instagram.svg'>
+                </li>
+                <li>
+                    <img src='./img/social-instagram.svg'>
+                </li>
+                <li>
+                    <img src='./img/social-instagram.svg'>
+                </li>
+                <li>
+                    <img src='./img/social-instagram.svg'>
+                </li>
+            </ul>
+            <ul class="right-side-links">
+                <li>
+                    <a>Terms</a>
+                </li>
+                <li>
+                    <a>CA Supply Chain</a>
+                </li>
+                <li>
+                    <a>Privacy</a>
+                </li>
+                <li>
+                    <a>CA Privacy Rights</a>
+                </li>
+                <li>
+                    <a>Do Not Sell My Personal Information
+                    </a>
+                </li>
+                <li>
+                    <a>Internet-Based Ads</a>
+                </li>
+                <li>
+                    <a>™ & © 2021 Target Brands, Inc.</a>
+                </li>
+            </ul>
+        </div>
+        
+    </footer>
+
+    <script src='./main.js'></script>
+</body>
