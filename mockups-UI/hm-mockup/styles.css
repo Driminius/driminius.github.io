@@ -1,4 +1,4 @@
-@import url("http://db.onlinewebfonts.com/c/09c8fb44d2c62d99647e4ce58736293e?family=HMSansLatin-Regular");
+@import url("https://db.onlinewebfonts.com/c/09c8fb44d2c62d99647e4ce58736293e?family=HMSansLatin-Regular");
 
 /*
       www.OnlineWebFonts.Com 
@@ -9,20 +9,20 @@
 */
 @font-face {
   font-family: "HMSansLatin-Regular";
-  src: url("http://db.onlinewebfonts.com/t/09c8fb44d2c62d99647e4ce58736293e.eot"); /* IE9*/
-  src: url("http://db.onlinewebfonts.com/t/09c8fb44d2c62d99647e4ce58736293e.eot?#iefix")
+  src: url("https://db.onlinewebfonts.com/t/09c8fb44d2c62d99647e4ce58736293e.eot"); /* IE9*/
+  src: url("https://db.onlinewebfonts.com/t/09c8fb44d2c62d99647e4ce58736293e.eot?#iefix")
       format("embedded-opentype"),
     /* IE6-IE8 */
-      url("http://db.onlinewebfonts.com/t/09c8fb44d2c62d99647e4ce58736293e.woff2")
+      url("https://db.onlinewebfonts.com/t/09c8fb44d2c62d99647e4ce58736293e.woff2")
       format("woff2"),
     /* chrome firefox */
-      url("http://db.onlinewebfonts.com/t/09c8fb44d2c62d99647e4ce58736293e.woff")
+      url("https://db.onlinewebfonts.com/t/09c8fb44d2c62d99647e4ce58736293e.woff")
       format("woff"),
     /* chrome firefox */
       url("http://db.onlinewebfonts.com/t/09c8fb44d2c62d99647e4ce58736293e.ttf")
       format("truetype"),
     /* chrome firefox opera Safari, Android, iOS 4.2+*/
-      url("http://db.onlinewebfonts.com/t/09c8fb44d2c62d99647e4ce58736293e.svg#HMSansLatin-Regular")
+      url("https://db.onlinewebfonts.com/t/09c8fb44d2c62d99647e4ce58736293e.svg#HMSansLatin-Regular")
       format("svg"); /* iOS 4.1- */
 }
 
@@ -55,7 +55,7 @@ button:hover {
 
 html,
 body {
-  font-family: "HMSansLatin-Regular";
+  font-family: "HMSansLatin-Regular", sans-serif;
   line-height: 1.4;
   color: #000;
   background-color: var(--color--primary);
