@@ -55,7 +55,7 @@ button:hover {
 
 html,
 body {
-  font-family: "HMSansLatin-Regular", sans-serif;
+  font-family: "HMSansLatin-Regular";
   line-height: 1.4;
   color: #000;
   background-color: var(--color--primary);
