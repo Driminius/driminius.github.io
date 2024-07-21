@@ -1,0 +1,92 @@
+/* css for testing new-main.html */
+* {
+  margin: 3px;
+}
+body {
+  background-color: #333;
+  color: #fff;
+}
+
+ul.topnav li {
+
+  list-style:none;
+  float: left;
+}
+
+a {
+  color: lime;
+}
+a:hover {
+  color: limegreen;
+}
+
+ul li a {
+  color: lime;
+}
+
+ul li a:hover {
+  color: limegreen;
+}
+
+ul li.topnav-right {
+
+  float: right;
+}
+ul li.dropdownIcon {
+  display: none;
+}
+
+.myFont {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em; 
+}
+
+.socialMediaWrapper{
+  text-align:center;
+  display:block;
+  margin:auto;
+}
+
+.aside {
+  position: fixed;
+  right: 0px;
+  /* top: 0x */
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow:hidden;
+  
+}
+
+ul.bulletStyle {
+    font-size: 1em;
+}
+
+/* CSS for Masonry widths */
+.grid-item{
+    width: 200px;
+}
+.grid-item--width2 {
+  width: 400px;
+}
+
+
+/* Mobile Responisive */
+@media screen and (max-width: 680px) {
+  ul.topnav li:not(:nth-child(1)) {
+    display:none;
+  }
+
+  ul.topnav li.dropdownIcon {
+    display: block;
+    float: right;
+  }
+
+  .aside {
+   right: auto;
+   display: flex;
+   position: relative;
+  }
+  .aside img {
+    display: none;
+  }
+}
