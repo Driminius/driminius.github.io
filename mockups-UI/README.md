@@ -1,0 +1,1 @@
+Creating mockups to work on UI. Strictly using HTML5, CSS3, and Vanilla javascript. Enjoy!

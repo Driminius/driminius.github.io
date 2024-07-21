@@ -1,0 +1,152 @@
+/* CUSTOM FONTS */
+@font-face {
+    font-family: typeWriterFont;
+    src: url("./assets/fonts/linowrite.ttf");
+}
+.essayFont {
+    font-family: typeWriterFont;
+}
+
+@media (max-width:575.98px) {
+
+}
+
+
+@media (max-width:767.98px) {
+
+}
+
+
+
+
+
+/*.testContainer{
+     background-color: #6C2EB9;
+}*/
+
+.sectionLight {
+    background: #C3D1A7;
+}
+
+.sectionDark {
+    background: #C9D5AF;  /* olive */
+}
+
+ul.bulletStyle {
+    font-size: 1em;
+}
+
+.buttonEmail {
+    display: block;
+    margin: auto;
+}
+
+.buttonClear {
+    background: none;
+    border: none;
+
+}
+
+.myPaddingButton {
+    padding: 10px;
+}
+
+.container-fluid {
+ /*  padding: 0; */
+}
+
+.videoSize {
+    width: 100%;
+}
+
+.myImg {
+    height:15%;
+    width: 100%;
+}
+
+.no-padding-col {
+    padding: 0;
+}
+/*
+.myMediaImg {
+    width: 100%;
+}
+*/
+
+.imgOpacity {
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.marginHeading {
+    margin-top: 8px;
+}
+
+.paddingVideos {
+    padding: 10px;
+}
+
+.card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
+}
+
+.parallax {
+    /* The image used */
+    background-image: url('./assets/web-c.jpg');
+
+    /* Full height */
+    height: 500px;
+    width: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.styleLand {
+    color: #000000;
+}
+
+.myFontColor {
+    color:aqua;
+}
+
+.noStyleButton{
+    background:none;
+    border:none;
+}
+
+.videoButton {
+    background-image: url('./assets/img/ile-ep-1-trans.jpg');
+    width: 100%;
+    height: 15rem;
+    background-size: 100%;
+    border: none;
+
+}
+.videoButton:hover {
+    background-image: url('./assets/img/ile-ep-1-color.jpg');
+}
+
+.rowPadding {
+    padding-bottom:20px;
+}
+
+.fa-facebook-official {
+    color: white;
+}
+
+.fa-google-plus-square {
+    color: yellow;
+}
+
+.fa-instagram {
+    color: #ffffff;
+}
