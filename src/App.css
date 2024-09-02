@@ -1,8 +1,7 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
+  max-width: 100%;
   padding: 2rem;
-  text-align: center;
+  
 }
 
 .logo {
@@ -17,6 +16,43 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+
+.myFont {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em; 
+}
+.aside {
+  position: fixed;
+  right: 0px;
+  /* top: 0x */
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow:hidden;
+  
+}
+
+/* custom ul overrides Bootstrap framework styling for ul */
+.side-bar-right {
+  padding-left: 0;
+  text-align: center;
+}
+
+.side-bar-right li {
+  padding: 10px 0 10px 0;
+}
+
+.nightTime {
+  transform: translateX(20px);
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+}
+
+.dayTime {
+  transform: translateX(-20px);
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+}
+
 
 @keyframes logo-spin {
   from {
@@ -33,9 +69,7 @@
   }
 }
 
-.card {
-  padding: 2em;
-}
+
 
 .read-the-docs {
   color: #888;

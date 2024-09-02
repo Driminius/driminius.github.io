@@ -25,7 +25,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;
 }
@@ -52,6 +52,54 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+blockquote {
+  border-left: solid;
+  border-left-width: thick;
+  border-left-color: rgb(184, 184, 184);
+  padding: 7px 20px;
+}
+
+/* flex all the items in the container */
+.nav-container {
+  display: flex;
+  padding: 20px;
+}
+.nav-container nav {
+  width: 100%;
+  display: flex;
+}
+
+.nav-container nav .brand {
+  justify-content:left;
+}
+
+.nav-container nav ul{
+  display: flex;
+  list-style-type: none;
+  justify-content: space-evenly;
+  flex: 1;
+}
+
+nav ul li {
+  padding: 0 20px;
+}
+
+nav ul.navbar-nav-right {
+  justify-content: end;
+}
+
+ul.side-bar-right {
+  list-style-type:none;
+}
+
+.activeLink {
+  color: orange;
+}
+
+.flex-for-bs-card {
+  display: flex;
 }
 
 @media (prefers-color-scheme: light) {
