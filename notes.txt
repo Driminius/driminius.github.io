@@ -1,4 +1,0 @@
-In order to push this to github pages,
-I need to create a CI/CD Pipeline and github actions
-everytime I make changes this pipeline will trigger and communicate with github to push into 
-gh-pages
