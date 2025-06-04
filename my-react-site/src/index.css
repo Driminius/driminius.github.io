@@ -1,3 +1,5 @@
+
+/*
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -12,6 +14,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+  */
+
+/*
+begin of template code
 
 a {
   font-weight: 500;
@@ -66,3 +72,6 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+end of template code
+*/
