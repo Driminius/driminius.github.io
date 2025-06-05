@@ -9,16 +9,17 @@ const MainLayout = () => {
         <>
             <NavBar />
             <div
-                className='grid grid-cols-1 md:grid-cols-[15%_85%] w-full gap-6'
+                        
+                className=' m-auto max-w-7xl p-[2rem] grid grid-cols-1 md:grid-cols-[15%_85%] '
             >
-                <div>
-             <SideBar />
-             </div>
-             <div>
-            <main>
-            <Outlet />
-            </main>
-            </div>
+                <div className=''>
+                    <SideBar />
+                </div>
+                <div className=''>
+                    <main>
+                        <Outlet />
+                    </main>
+                </div>
             </div>
             <Footer />
         </>

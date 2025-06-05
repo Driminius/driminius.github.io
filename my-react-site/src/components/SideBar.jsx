@@ -1,19 +1,20 @@
 import { Link } from "react-router";
+import {FaHouse,FaFolder } from "react-icons/fa6"
 const SideBar = () => {
     return (
         <div>
-             <aside className=''>
+             <aside className='text-center'>
                     <ul>
                         <li>
                         <Link to='/'>
-                        Home
+                        <FaHouse />
                         </Link>
                         </li>
                         <li>
-                      <Link to='/portfolio'>Portfolio</Link>
+                      <Link to='/portfolio'><FaFolder /></Link>
                       </li>
                       <li>Resume</li>
-                      <li>Watches</li>
+                      <li>Contact</li>
                       <li>Belts</li>
                       <li></li>
                     </ul>

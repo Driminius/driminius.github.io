@@ -16,7 +16,7 @@ const NavBar = () => {
                         alt="Clothing Store"
                     />
                     <span className="hidden md:block text-white text-2xl font-bold ml-2"
-                        ><h1>Clothing Store</h1></span>
+                        ><h1>AD Designs</h1></span>
                     </Link>
                     <div className="md:ml-auto">
                     <div className="flex space-x-2">

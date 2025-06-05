@@ -1,9 +1,9 @@
 const HomePage = () => {
     return (
-        <>
-        <p>hello from homepage?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel provident nostrum dolorum suscipit odio quas cum quam animi placeat molestias omnis nam facere fugit iusto quod repudiandae, magni deleniti commodi?</p>
-        </>
+        <section>
+            <p>hello from HomePage</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis minus tempora dolorem magnam, nesciunt placeat possimus, sapiente mollitia consequuntur recusandae voluptatem animi autem minima accusantium. Praesentium tempore nesciunt itaque voluptatum.</p>    
+        </section>
     )
 
 }

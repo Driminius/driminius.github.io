@@ -4,8 +4,11 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import MainLayout from './layouts/MainLayout'
+import ShopLayout from './layouts/ShopLayout'
 import HomePage from './pages/HomePage'
 import PortfolioPage from './pages/PortfolioPage'
+import ShopHomePage from './projects/shopping/shopping-pages/ShopHomePage'
+
 
 
 function App() {
@@ -20,9 +23,14 @@ function App() {
           <Route path='/portfolio' element={<PortfolioPage />}/>
         </Route>
       </Routes>
-      <h1 className='text-3xl font-bold underline'>Adrian Domingo</h1>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat reiciendis ratione distinctio omnis ullam tempora consequuntur necessitatibus quod quia praesentium, ipsam cum iure cumque iusto alias facere voluptas corporis laudantium.</p>
 
+      <Routes>
+        <Route path='/projects/shop' element={<ShopLayout />}>
+          <Route path='/projects/shop/home' element={<ShopHomePage />}>
+          </Route>
+        </Route>
+      </Routes>
+     
     </Router>  
   )
 }
