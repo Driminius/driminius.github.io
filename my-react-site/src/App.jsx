@@ -8,6 +8,7 @@ import ShopLayout from './layouts/ShopLayout'
 import HomePage from './pages/HomePage'
 import PortfolioPage from './pages/PortfolioPage'
 import ShopHomePage from './projects/shopping/shopping-pages/ShopHomePage'
+import ContactMePage from './pages/ContactMePage'
 
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route path='/' element={<MainLayout />}>
           <Route index element={<HomePage />}/>
           <Route path='/portfolio' element={<PortfolioPage />}/>
+          <Route path='contact-me' element={<ContactMePage />} />
         </Route>
       </Routes>
 

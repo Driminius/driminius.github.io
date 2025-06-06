@@ -4,9 +4,9 @@ import { Link } from "react-router";
 const NavBar = () => {
     return (
         <>
-            <nav className="bg-indigo-700 border-b border-indigo-500">
+            <nav className="bg-[#323232] border-b border-[#323232]-500">
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-                <div className="flex h-20 items-center justify-between">
+                <div className="flex text-white h-20 items-center justify-between">
                 <div
                     className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
                     <Link className="flex flex-shrink-0 items-center mr-4" to="/">

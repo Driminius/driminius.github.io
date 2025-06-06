@@ -1,21 +1,20 @@
 import { Link } from "react-router";
-import {FaHouse,FaFolder } from "react-icons/fa6"
+import {FaHouse,FaFolder, FaUser } from "react-icons/fa6"
 const SideBar = () => {
     return (
         <div>
-             <aside className='text-center'>
-                    <ul>
-                        <li>
+             <aside className=''>
+                    <ul className='grid justify-center'>
+                        <li className='p-3'>
                         <Link to='/'>
-                        <FaHouse />
+                            <FaHouse size={30} />
                         </Link>
                         </li>
-                        <li>
-                      <Link to='/portfolio'><FaFolder /></Link>
+                        <li className='p-3'>
+                      <Link to='/portfolio'><FaFolder size={30}/></Link>
                       </li>
-                      <li>Resume</li>
-                      <li>Contact</li>
-                      <li>Belts</li>
+                      <li className='p-3'>Resume</li>
+                      <li className='p-3'><Link to='/contact-me'><FaUser size={30}/></Link></li>
                       <li></li>
                     </ul>
             </aside>  
