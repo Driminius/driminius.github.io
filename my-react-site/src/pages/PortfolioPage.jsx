@@ -4,7 +4,7 @@ const PortfolioPage = () => {
         <section>
             <h2>Portfolio</h2>
             <div className='grid grid-cols-1 md:grid-cols-3 md:gap-6'>
-                <Link to='/projects/shop'>
+                <Link to='/projects/shop/home'>
                 <div className='card'>
                     <img 
                         src='/images/vite.svg'

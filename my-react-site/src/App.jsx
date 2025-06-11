@@ -27,9 +27,9 @@ function App() {
       </Routes>
 
       <Routes>
-        <Route path='/projects/shop' element={<ShopLayout />}>
-          <Route path='/projects/shop/home' element={<ShopHomePage />}>
-          </Route>
+        <Route path='/projects/shop/' element={<ShopLayout />}>
+          <Route path='/projects/shop/home' element={<ShopHomePage />} />
+          <Route path='/projects/shop/home/:id' />
         </Route>
       </Routes>
      
