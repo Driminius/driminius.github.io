@@ -10,7 +10,7 @@ const MainLayout = () => {
             <NavBar />
             <div
                         
-                className=' m-auto max-w-7xl h-screen p-[2rem] grid grid-cols-1 md:grid-cols-[15%_85%] '
+                className=' m-auto max-w-7xl p-[2rem] grid grid-cols-1 md:grid-cols-[15%_85%] '
             >
                 <div className=''>
                     <SideBar />
