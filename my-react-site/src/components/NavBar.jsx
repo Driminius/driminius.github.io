@@ -3,7 +3,7 @@ import logo from '../assets/react.svg'
 import { Link } from "react-router";
 const NavBar = () => {
     return (
-        <>
+        <header>
             <nav className="bg-[#323232] border-b border-[#323232]-500">
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                 <div className="flex text-white h-20 items-center justify-between">
@@ -38,7 +38,7 @@ const NavBar = () => {
                 </div>
             </div>
         </nav>
-        </>
+        </header>
     )
 }
 

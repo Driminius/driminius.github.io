@@ -2,7 +2,7 @@ import { Link } from "react-router";
 import logo from '/images/logo.png'
 const Footer = () => {
     return (
-        <footer>
+        <footer className=''>
                 <nav className="bg-[#323232] border-b border-[#323232]-500">
                 <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                     <div className="flex text-white h-20 items-center justify-between">

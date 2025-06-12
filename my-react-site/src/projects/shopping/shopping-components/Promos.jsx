@@ -7,7 +7,7 @@ const Promos = () => {
             className='grid grid-cols-2'
         >
             <div 
-                className="bg-[url('src/assets/male-shorts.webp')]  h-200 bg-cover "
+                className="bg-[url('/images/male-shorts.webp')]  h-200 bg-cover "
                 role='img'
                 aria-label="denim shorts for men"
             >
@@ -25,7 +25,7 @@ const Promos = () => {
                 </Link>
             </div>
             <div 
-                className="bg-[url('src/assets/woman-shorts.webp')] h-200 bg-cover" 
+                className="bg-[url('/images/woman-shorts.webp')] h-200 bg-cover" 
                 role='img'
                 aria-label="denim shorts for women"
             >

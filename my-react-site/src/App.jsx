@@ -1,14 +1,15 @@
 import { useState } from 'react'
 import { HashRouter as Router, Routes, Route } from 'react-router'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import MainLayout from './layouts/MainLayout'
-import ShopLayout from './layouts/ShopLayout'
+import ShopLayout from './projects/shopping/shopping-layouts/ShopLayout'
 import HomePage from './pages/HomePage'
 import PortfolioPage from './pages/PortfolioPage'
 import ShopHomePage from './projects/shopping/shopping-pages/ShopHomePage'
 import ContactMePage from './pages/ContactMePage'
+import ClothArticleLayout from './projects/shopping/shopping-layouts/ClothArticleLayout'
+import clothesData from '../clothes.json'
+import ClothArticle from './projects/shopping/shopping-components/ClothArticle'
 
 
 
@@ -29,7 +30,7 @@ function App() {
       <Routes>
         <Route path='/projects/shop/' element={<ShopLayout />}>
           <Route path='/projects/shop/home' element={<ShopHomePage />} />
-          <Route path='/projects/shop/home/:id' />
+          <Route path='/projects/shop/home/:id' element={<ClothArticleLayout list={clothesData}/>} />
         </Route>
       </Routes>
      

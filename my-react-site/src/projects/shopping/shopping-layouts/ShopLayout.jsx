@@ -1,7 +1,7 @@
 import { Outlet } from "react-router";
-import clothesData from '../../clothes.json'
-import NavBar from "../projects/shopping/shopping-components/NavBar";
-import Footer from "../projects/shopping/shopping-components/Footer";
+import clothesData from '../../../../clothes.json'
+import NavBar from "../shopping-components/NavBar";
+import Footer from "../shopping-components/Footer";
 
 console.log(clothesData);
 
