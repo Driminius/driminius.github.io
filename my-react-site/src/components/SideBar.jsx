@@ -7,15 +7,19 @@ const SideBar = () => {
                     <ul className='grid justify-center'>
                         <li className='p-3'>
                         <Link to='/'>
-                            <FaHouse size={30} />
+                            Home
                         </Link>
                         </li>
                         <li className='p-3'>
-                      <Link to='/portfolio'><FaFolder size={30}/></Link>
+                      <Link to='/portfolio'>
+                            Portfolio
+                      </Link>
+                      
                       </li>
                       <li className='p-3'>Resume</li>
-                      <li className='p-3'><Link to='/contact-me'><FaUser size={30}/></Link></li>
-                      <li></li>
+                      <li className='p-3'><Link to='/contact-me'>
+                            Contact Me
+                      </Link></li>
                     </ul>
             </aside>  
         </div>

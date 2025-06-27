@@ -4,7 +4,7 @@ const Promos = () => {
     
     return (
         <section
-            className='grid grid-cols-2'
+            className='grid grid-cols-1 md:grid-cols-2'
         >
             <div 
                 className="bg-[url('/images/male-shorts.webp')]  h-200 bg-cover "

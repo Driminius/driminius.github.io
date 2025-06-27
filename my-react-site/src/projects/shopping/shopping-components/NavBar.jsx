@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import logo from '../../../assets/react.svg'
 const NavBar = () => {
     return (
         <>
@@ -11,6 +12,7 @@ const NavBar = () => {
                     <img
                         className="h-10 w-auto"
                         alt="Clothing Store"
+                        src={logo}
                     />
                     <span className="hidden md:block text-white text-2xl font-bold ml-2"
                         ><h1>Clothing Store</h1></span>

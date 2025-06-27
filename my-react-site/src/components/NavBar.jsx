@@ -16,24 +16,26 @@ const NavBar = () => {
                         alt="Clothing Store"
                     />
                     <span className="hidden md:block text-white text-2xl font-bold ml-2"
-                        ><h1>AD Designs</h1></span>
+                        >AD Designs</span>
                     </Link>
-                    <div className="md:ml-auto">
-                    <div className="flex space-x-2">
-                        <a
-                        to="/"
-                       // className={  }
-                        >Home</a>
-                        <a
-                        to="/jobs"
-                        //className={ linkClass }
-                        >Jobs</a>
-                        <a
-                        to="/add-job"
-                        //className={ linkClass }
-                        >Add Job</a>
-                    </div>
-                    </div>
+                    {/* 
+                        <div className="md:ml-auto">
+                            <div className="flex space-x-2">
+                                <a
+                                to="/"
+                            // className={  }
+                                >Home</a>
+                                <a
+                                to="/jobs"
+                                //className={ linkClass }
+                                >Jobs</a>
+                                <a
+                                to="/add-job"
+                                //className={ linkClass }
+                                >Add Job</a>
+                            </div>
+                        </div>
+                    */}
                 </div>
                 </div>
             </div>
