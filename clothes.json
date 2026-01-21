@@ -1,0 +1,153 @@
+[
+    {
+      "id": 1,
+      "title": "White T-Shirt",
+      "category": "men",
+      "description": "a Hanes white tee",
+      "image": "/images/blacktee1.png",
+      "cost": "$10.95",
+      "onhand": 3,
+      "brand": {
+        "name": "Hanes",
+        "slogan": "Look who we've got our Hanes on now",
+        "contactEmail": "consumer.accessibility@hanes.com",
+        "contactPhone": "555-555-5555"
+      },
+      "myData": [1,2,3,4,5]
+    },
+    {
+      "id": 2,
+      "title": "Black T-Shirt",
+      "category": "men",
+      "description": "an American Eagle black tee",
+      "image": "/images/blacktee1.png",
+      "cost": "$15.95",
+      "onhand": 3,
+      "brand": {
+        "name": "American Eagle",
+        "slogan": "#AerieREAL",
+        "contactEmail": "AEStores@ae.com",
+        "contactPhone": "(888)232-4535"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Jeans",
+      "category": "men",
+      "description": "Levis 510 jeans",
+      "image": "/images/blacktee1.png",
+      "cost": "$50.99",
+      "onhand": 3,
+      "brand": {
+        "name": "Hanes",
+        "slogan": "Look who we've got our Hanes on now",
+        "contactEmail": "consumer.accessibility@hanes.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Scarf",
+      "category": "women",
+      "description": "a red scarf",
+      "image": "/images/blacktee1.png",
+      "cost": "$10.95",
+      "onhand": 3,
+      "brand": {
+        "name": "Hanes",
+        "slogan": "Look who we've got our Hanes on now",
+        "contactEmail": "consumer.accessibility@hanes.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Tie",
+      "category": "men",
+      "description": "a Hanes white tee",
+      "image": "/images/blacktee1.png",
+      "cost": "$30.95",
+      "onhand": 3,
+      "brand": {
+        "name": "Hanes",
+        "slogan": "Look who we've got our Hanes on now",
+        "contactEmail": "consumer.accessibility@hanes.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Boat Shoes",
+      "category": "men",
+      "description": "a Hanes white tee",
+      "image": "/images/blacktee1.png",
+      "cost": "$70.99",
+      "onhand": 3,
+      "brand": {
+        "name": "Hanes",
+        "slogan": "Look who we've got our Hanes on now",
+        "contactEmail": "consumer.accessibility@hanes.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "asdf",
+      "title": "Boat Shoes",
+      "category": "women",
+      "description": "a Hanes white tee",
+      "image": "/images/blacktee1.png",
+      "cost": "$10.95",
+      "onhand": 3,
+      "brand": {
+        "name": "Hanes",
+        "slogan": "Look who we've got our Hanes on now",
+        "contactEmail": "consumer.accessibility@hanes.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "vheruifjeiohjfnvo",
+      "title": "Boat Shoes",
+      "category": "women",
+      "description": "a Hanes white tee",
+      "image": "/images/blacktee1.png",
+      "cost": "$10.95",
+      "onhand": 3,
+      "brand": {
+        "name": "Hanes",
+        "slogan": "Look who we've got our Hanes on now",
+        "contactEmail": "consumer.accessibility@hanes.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "vbvcb",
+      "title": "Boat Shoes",
+      "category": "women",
+      "description": "a Hanes white tee",
+      "image": "/images/blacktee1.png",
+      "cost": "$10.95",
+      "onhand": 3,
+      "brand": {
+        "name": "Hanes",
+        "slogan": "Look who we've got our Hanes on now",
+        "contactEmail": "consumer.accessibility@hanes.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "gfhgfh",
+      "title": "Boat Shoes",
+      "category": "women",
+      "description": "a Hanes white tee",
+      "image": "/images/blacktee1.png",
+      "cost": "$10.95",
+      "onhand": 3,
+      "brand": {
+        "name": "Hanes",
+        "slogan": "Look who we've got our Hanes on now",
+        "contactEmail": "consumer.accessibility@hanes.com",
+        "contactPhone": "555-555-5555"
+      }
+    }
+  ]
