@@ -2,7 +2,7 @@
   "name": "my-react-site",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://driminius.github.io/react-gh-pages",
+  "homepage": "https://driminius.github.io/",
   "type": "module",
   "scripts": {
     "dev": "vite",
