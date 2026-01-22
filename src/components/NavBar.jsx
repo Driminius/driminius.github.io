@@ -1,5 +1,5 @@
 import { NavLink } from "react-router";
-import custLogo from "../assets/SoaringSlothSunset-crop2.png";
+import custLogo from "../assets/soaring-sloth-2.png";
 import { Link } from "react-router";
 import { useState } from "react";
 import { FaBars } from "react-icons/fa6";
@@ -15,19 +15,21 @@ const NavBar = () => {
     <header>
       <nav className="border-b ">
         <div className="flex items-center gap-6 justify-end">
-          <Link className="flex-1" to="/">
-            <img
-              className="h-20 mt-2 w-auto "
-              src={custLogo}
-              alt="Clothing Store"
-            />
-          </Link>
-          <span className="hidden md:block  text-2xl font-bold ml-2">
+          <div className="mr-auto ml-10 pt-4 pb-4">
+            <Link to="/">
+              <img
+                className="h-15  "
+                src={custLogo}
+                alt="A cartoon sloth with an orange background soaring in the sky"
+              />
+            </Link>
+          </div>
+          <span className="hidden md:block text-2xl font-bold ml-2">
             AD Designs
           </span>
           <div className="mr-10">
             <button
-              className="  md:hidden cursor-pointer "
+              className="md:hidden cursor-pointer"
               onClick={handleHamburger}
             >
               <FaBars size={25} />
