@@ -1,7 +1,8 @@
 import { Link } from "react-router";
-import logo from "../assets/SoaringSlothSunset-crop2.png";
+import logo from "../assets/soaring-sloth-2.png";
 import cryptoImg from "../assets/crypto-dash.png";
 import ideadropImg from "../assets/idea-drop-cover.png";
+import prostoreImg from "../assets/prostore-thumb.png";
 import CustomTitle from "../components/CustomTitle";
 
 const PortfolioPage = () => {
@@ -119,6 +120,32 @@ const PortfolioPage = () => {
                 Languages: TypeScript
                 <br />
                 Framework: ReactJS, TailwindCSS <br />
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://prostore-eight-omega.vercel.app/" target="_blank">
+          <div className="card">
+            <img
+              style={{ height: "300px" }}
+              src={prostoreImg}
+              alt="crypto coin dashboard showing 'bitcoin' and 'ethereum' "
+            />
+            <div className="card-info">
+              <h2 className="mt-2 mb-2 text-2xl font-bold tracking-wide">
+                <span className="pb-1 border-b-8 border-[#E1E1E1]">
+                  Prostore
+                </span>
+              </h2>
+              <p className="pt-4 pb-2">
+                A demo of an ecommerce shopping experience
+              </p>
+              <h3 className="font-bold ">Technology Stack</h3>
+              <p>
+                Languages: TypeScript
+                <br />
+                Framework: ReactJS, TailwindCSS, Next.js <br />
               </p>
             </div>
           </div>
