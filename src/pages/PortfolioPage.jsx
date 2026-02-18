@@ -12,6 +12,7 @@ const PortfolioPage = () => {
     <section>
       <h1 className="font-bold text-2xl mb-7">Portfolio</h1>
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-6">
+        {/* 
         <Link to="/projects/shop/home">
           <div className="card">
             <img
@@ -41,6 +42,7 @@ const PortfolioPage = () => {
             </div>
           </div>
         </Link>
+        */}
         <Link to="/portfolio/calendar">
           <div className="card">
             <img
