@@ -10,29 +10,10 @@ const HomePage = () => {
       </h1>
 
       <HeadingTwoCopy
-        head="Technologies"
-        copy="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea illum aliquid 
-                obcaecati quam id similique velit optio ipsam, quasi laborum ipsum earum libero 
-                error ratione mollitia quos officia. Animi, a! lore Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea illum aliquid 
-                obcaecati quam id similique velit optio ipsam, quasi laborum ipsum earum libero 
-                error ratione mollitia quos officia. Animi, a! lore
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea illum aliquid 
-                obcaecati quam id similique velit optio ipsam, quasi laborum ipsum earum libero 
-                error ratione mollitia quos officia. Animi, a! lore
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea illum aliquid 
-                obcaecati quam id similique velit optio ipsam, quasi laborum ipsum earum libero 
-                error ratione mollitia quos officia. Animi, a! loreLorem ipsum dolor sit amet consectetur adipisicing elit. Ea illum aliquid 
-                obcaecati quam id similique velit optio ipsam, quasi laborum ipsum earum libero 
-                error ratione mollitia quos officia. Animi, a! lore"
-      />
-
-      <HeadingTwoCopy
         head="Let's Work Together!"
-        copy="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi id ratione sit 
-                laudantium suscipit atque sapiente at, aspernatur distinctio voluptatum corporis asperiores 
-                harum dolorem aperiam nam non doloremque officiis cumque. Lorem ipsum dolor sit amet 
-                consectetur adipisicing elit. Ea illum aliquid obcaecati quam id similique velit optio 
-                ipsam, quasi laborum ipsum earum libero error ratione mollitia quos officia. Animi, a!"
+        copy="I'm very passionate about art and technology! Let's build genuine apps/websites together! I'm very 
+        transparent and calculated with design and open to feedback. I provide research and evidence to backup any 
+        design or strategies, I propose. Transparency and communication is key."
       />
 
       <HeadingTwoCopy
