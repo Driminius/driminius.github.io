@@ -3,6 +3,7 @@ import logo from "../assets/soaring-sloth-2.png";
 import cryptoImg from "../assets/crypto-dash.png";
 import ideadropImg from "../assets/idea-drop-cover.png";
 import prostoreImg from "../assets/prostore-thumb.png";
+import ramenHalfImg from "../assets/ramenhalflogo.png";
 import CustomTitle from "../components/CustomTitle";
 
 const PortfolioPage = () => {
@@ -148,6 +149,38 @@ const PortfolioPage = () => {
                 Languages: TypeScript
                 <br />
                 Framework: ReactJS, TailwindCSS, Next.js <br />
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://ramenandahalf-dev-frontend.vercel.app" target="_blank">
+          <div className="card">
+            <img
+              style={{ height: "300px" }}
+              src={ramenHalfImg}
+              alt="crypto coin dashboard showing 'bitcoin' and 'ethereum' "
+            />
+            <div className="card-info">
+              <h2 className="mt-2 mb-2 text-2xl font-bold tracking-wide">
+                <span className="pb-1 border-b-8 border-[#E1E1E1]">
+                  Ramen and a Half
+                </span>
+              </h2>
+              <p className="pt-4 pb-2">
+                A pop culture website built with Strapi and React Router. The
+                client wanted to blog website, I proposed to create a React SSR
+                website for SEO, and Strapi as the content management system.
+                Because I'm using Strapi, its possible to create different
+                front-end experiences.
+              </p>
+              <h3 className="font-bold ">Technology Stack</h3>
+              <p>
+                Languages: TypeScript
+                <br />
+                Framework: ReactJS, TailwindCSS <br />
+                CMS: Strapi <br />
+                DB: PostgreSQL <br />
               </p>
             </div>
           </div>

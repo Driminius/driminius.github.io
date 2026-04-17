@@ -11,9 +11,9 @@ const HomePage = () => {
 
       <HeadingTwoCopy
         head="Let's Work Together!"
-        copy="I'm very passionate about art and technology! Let's build genuine apps/websites together! I'm very 
+        copy="Bringing together art and technology. Let's build genuine apps/websites together. I'm very 
         transparent and calculated with design and open to feedback. I provide research and evidence to backup any 
-        design or strategies, I propose. Transparency and communication is key."
+        design or strategies. Transparency and communication is key."
       />
 
       <HeadingTwoCopy
