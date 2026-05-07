@@ -100,33 +100,6 @@ const PortfolioPage = () => {
             </div>
           </div>
         </a>
-        <a href="https://idea-drop-ui-bay-nine.vercel.app" target="_blank">
-          <div className="card">
-            <img
-              style={{ height: "300px" }}
-              src={ideadropImg}
-              alt="Welcome to Idea Drop application"
-              className="border-b-2 border-blue-900"
-            />
-            <div className="card-info">
-              <h2 className="mt-2 mb-2 text-2xl font-bold tracking-wide">
-                <span className="pb-1 border-b-8 border-[#E1E1E1]">
-                  Idea Drop
-                </span>
-              </h2>
-              <p className="pt-4 pb-2">
-                A full-stack React App that allows users to register and post
-                ideas.
-              </p>
-              <h3 className="font-bold ">Technology Stack</h3>
-              <p>
-                Languages: TypeScript
-                <br />
-                Framework: ReactJS, TailwindCSS <br />
-              </p>
-            </div>
-          </div>
-        </a>
 
         <a href="https://prostore-eight-omega.vercel.app/" target="_blank">
           <div className="card">
